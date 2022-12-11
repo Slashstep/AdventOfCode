@@ -1,13 +1,14 @@
-# Anzahl der Paare finden, bei denen ein Teil den anderen vollständig einschließt
+# Part 1: 540, Part 2: 872
 
-def overlappingPairs():
+lines = []
+
+def inputToArray():
+    global lines
     with open('input.txt', 'r') as f:
         lines = f.readlines()
 
-    
-    doubleString = ""
+def completlyOverlappingPairs():
     counter = 0
-    # Split string into two strings and search for doubles
     for l in lines:
         leftLine, rightLine = l.split(sep=",", maxsplit=1)
         x1, x2 = leftLine.split(sep="-", maxsplit=1)
@@ -21,18 +22,13 @@ def overlappingPairs():
     print(counter)
 
 def partiallyOverlappingPairs():
-    with open('input.txt', 'r') as f:
-        lines = f.readlines()
-
-    
-    doubleString = ""
     counter = 0
-    # Split string into two strings and search for doubles
     for l in lines:
         leftLine, rightLine = l.split(sep=",", maxsplit=1)
         x1, x2 = leftLine.split(sep="-", maxsplit=1)
         y1, y2 = rightLine.split(sep="-", maxsplit=1)
 
+        # Searches all pairs with no overlap and substracts from total
         if int(x2) < int(y1):
             counter = counter + 1
         elif int(y2) < int(x1):
@@ -40,5 +36,6 @@ def partiallyOverlappingPairs():
         
     print(1000 - counter)
 
-#overlappingPairs()
-partiallyOverlappingPairs()
+inputToArray()
+completlyOverlappingPairs()     # Part 1
+partiallyOverlappingPairs()     # Part 2

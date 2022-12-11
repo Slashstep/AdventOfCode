@@ -1,8 +1,7 @@
+# Part 1: 1391690, Part 2: 5469168
 from anytree import NodeMixin, RenderTree, PostOrderIter, search
 
-class MyBaseClass(object):  # Just an example of a base class
-    foo = 4
-class Node(MyBaseClass, NodeMixin):  # Add Node feature
+class Node(NodeMixin):  # Add Node feature
      def __init__(self, name, size, parent=None, children=None):
          super(Node, self).__init__()
          self.name = name
@@ -19,38 +18,43 @@ def CreatDictionary():
     par = c
     
     for l in range(1, len(lines), 1):
-        #print(l)
-        if lines[l][0:1:1] != "$":
-            if lines[l][0:3:1] == "dir":
+        if lines[l][0:1] != "$":
+            if lines[l][0:3] == "dir":
                 l = Node(lines[l][4:-1], 0, parent=par, children=None)
             else:
                 size, name = lines[l].split(sep=" ", maxsplit=1)
-                l = Node(name[:-1:1], int(size), parent=par, children=None)
                 uPar = par
                 while par != None:
-                    par.size = par.size + int(size)
+                    par.size += int(size)
                     par = par.parent
                 par = uPar
         elif lines[l] == "$ cd ..\n":
             par = par.parent
         elif lines[l] != "$ ls\n":
             for d in par.children:
-                if d.name == lines[l][5:-1:1]:
+                if d.name == lines[l][5:-1]:
                     par = d
     
     for pre, _, node in RenderTree(c):
         treestr = u"%s%s" % (pre, node.name)
         print(treestr.ljust(8), node.size)
 
-    nodeListe = list(PostOrderIter(c, filter_=lambda node: node.children != ()))
+    nodeListe = list(PostOrderIter(c))
 
     sizeListe = []
     for n in nodeListe:
         sizeListe.append(n.size)
 
-    print(len(sizeListe))
     sizeListe.sort()
 
+    # Part 1:
+    sum = 0
+    for s in sizeListe:
+        if s <= 100000:
+            sum += s
+    print(sum)
+
+    # Part 2:
     difTotal = 70000000 - c.size
     difUpdate = 30000000 - difTotal
     for s in sizeListe:
@@ -58,6 +62,4 @@ def CreatDictionary():
             print(s)
             break
         
-
-
 CreatDictionary()

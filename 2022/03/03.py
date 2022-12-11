@@ -1,18 +1,16 @@
-# each backpack two large compartments
-# each line has to be split in to two parts
-# one letter is inside of both strings
+# Part 1: 7737, Part 2: 2697
 # lower case has a - z = 1 - 26
 # upper case has A - Z = 27 - 52
-# Sum of all the doubled items. 
 
+lines = []
 
-def doubleItemPerString():
+def inputToArray():
+    global lines
     with open('input.txt', 'r') as f:
         lines = f.readlines()
 
-    
+def doubleItemPerString():
     doubleString = ""
-    # Split string into two strings and search for doubles
     for l in lines:
         leftLine = l[:len(l)//2]
         rightLine = l[len(l)//2:]
@@ -21,7 +19,7 @@ def doubleItemPerString():
         for i in range(0, len(leftLine), 1):
             for j in range(0, len(rightLine), 1):
                 if(leftLine[i] == rightLine[j]):
-                    doubleString = doubleString + leftLine[i]
+                    doubleString += leftLine[i]
                     doubleFound = True
                     break
                 
@@ -30,10 +28,6 @@ def doubleItemPerString():
     calculateStringSum(doubleString)
 
 def doubleItemPerGroup():
-    with open('input.txt', 'r') as f:
-        lines = f.readlines()
-
-
     trippleString = ""
     for h in range(0, len(lines)-2, 3):
         line1 = lines[h]
@@ -51,23 +45,18 @@ def doubleItemPerGroup():
         for i in range(0, len(line3), 1):
             for j in range(0, len(doublesOfTwoStrings), 1):
                 if(line3[i] == doublesOfTwoStrings[j]):
-                    trippleString = trippleString + line3[i]
+                    trippleString += line3[i]
                     doubleFound = True
                     break
         
             if(doubleFound == True):
                 break
 
-        
-    
     calculateStringSum(trippleString)
-
     
 def calculateStringSum(liste):
-    # Calculate doubleSum
     sum = 0
     for c in liste:
-
         if ord(c) >= 65 and ord(c) <= 90:
             sum = sum + ord(c) - 38
         else:
@@ -75,5 +64,6 @@ def calculateStringSum(liste):
 
     print(sum)
 
-# doubleItemPerString()
-doubleItemPerGroup()
+inputToArray()
+doubleItemPerString()   # Part 1
+doubleItemPerGroup()    # Part 2

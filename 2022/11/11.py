@@ -56,5 +56,5 @@ def KeepAway(iterations, divideBy3):
     print(checks[-1] * checks[-2])
     
 calcLCM()
-KeepAway(20, True)
-#KeepAway(10000, False)
+KeepAway(20, True)          # Part 1
+#KeepAway(10000, False)     # Part 2
