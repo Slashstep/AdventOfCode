@@ -1,4 +1,7 @@
 # Part 1: 490 Part 2: 488
+# Uses barbone A* pathfinding without the g/h/f costs
+# Currently very slow
+
 x = 173
 y = 41
 
@@ -33,22 +36,7 @@ def inputToArray():
                     targetY = i
                     grid[i][j] = "z"
 
-def checkEachA():
-    pathlen = []
-    for i in range(0, len(grid), 1):
-        for j in range(165, len(grid[0]), 1):
-            if grid[i][j] == "a":
-                start = Node("a", None, (i, j))
-
-                pathlen.append(wayfinder(start))
-
-    pathlen.sort()
-    print(pathlen[0])
-
-def wayfinder(start_node):
-    global target_Node
-    #Starting Node to open List
-
+def AStarS2T(start_node, target_node): #From a specific start node, to a target Node
     openSet = []
     closedSet = []
     
@@ -56,17 +44,14 @@ def wayfinder(start_node):
 
     while len(openSet) > 0:
         current_node = openSet[0]
-
-        # Pop current off openSet, add to closedSet
+        
         openSet.pop(0)
         closedSet.append(current_node)
         
         # Found goal
-        if current_node.position == target_Node.position:
+        if current_node.position == target_node.position:
             path = []
             current = current_node
-
-            print("Target Found")
 
             while current is not None:
                 path.append(current.position)
@@ -76,29 +61,19 @@ def wayfinder(start_node):
 
         # Generate children
         for new_position in [(-1, 0), (0, 1), (1, 0), (0, -1)]:
-
-            # Get Node position
             node_position = (current_node.position[0] + new_position[0], current_node.position[1] + new_position[1])
 
-            # Clamp to range
             if node_position[0] < 0 or node_position[0] > len(grid[0]) - 1 or node_position[1] < 0 or node_position[1] > len(grid) -1:
                 continue
 
-            #Make sure letters match
             dist = ord(grid[node_position[1]][node_position[0]]) - ord(current_node.value)
-
             if dist >1:
                 continue
 
             isBreak = False
-
             for closed_child in closedSet:
                 if node_position == closed_child.position:
                     isBreak = True
-
-            if isBreak == True:
-                continue
-                
             for open_node in openSet:
                 if node_position == open_node.position:
                     isBreak = True
@@ -107,12 +82,9 @@ def wayfinder(start_node):
                 continue
             
             new_node = Node(grid[node_position[1]][node_position[0]], current_node, node_position)
-            
             openSet.append(new_node)
 
-def wayfinderback(start_node):
-    #Starting Node to open List
-
+def AStarT2S(start_node, symbol):   # From a specific start Node backwards to the first Node with a specific value
     openSet = []
     closedSet = []
     
@@ -121,16 +93,13 @@ def wayfinderback(start_node):
     while len(openSet) > 0:
         current_node = openSet[0]
 
-        # Pop current off openSet, add to closedSet
         openSet.pop(0)
         closedSet.append(current_node)
         
         # Found goal
-        if current_node.value == "a":
+        if current_node.value == symbol:
             path = []
             current = current_node
-
-            print("Target Found")
 
             while current is not None:
                 path.append(current.position)
@@ -140,29 +109,19 @@ def wayfinderback(start_node):
 
         # Generate children
         for new_position in [(-1, 0), (0, 1), (1, 0), (0, -1)]:
-
-            # Get Node position
             node_position = (current_node.position[0] + new_position[0], current_node.position[1] + new_position[1])
 
-            # Clamp to range
             if node_position[0] < 0 or node_position[0] > len(grid[0]) - 1 or node_position[1] < 0 or node_position[1] > len(grid) -1:
                 continue
 
-            #Make sure letters match
             dist = ord(current_node.value) - ord(grid[node_position[1]][node_position[0]])
-
             if dist >1:
                 continue
 
             isBreak = False
-
             for closed_child in closedSet:
                 if node_position == closed_child.position:
                     isBreak = True
-
-            if isBreak == True:
-                continue
-                
             for open_node in openSet:
                 if node_position == open_node.position:
                     isBreak = True
@@ -171,20 +130,12 @@ def wayfinderback(start_node):
                 continue
             
             new_node = Node(grid[node_position[1]][node_position[0]], current_node, node_position)
-            
             openSet.append(new_node)
-
-def printArray(arr1):
-    for i in range(0, len(arr1)):
-        string = ""
-        for j in range(0, len(arr1[0]),1):
-            string = string + arr1[i][j]
-        print(string)
-    print()
 
 inputToArray() 
-start_node = Node("a", None, (startX, startY))
-target_Node = Node("z", None, (targetX, targetY))
-wayfinderback(start_node)
-wayfinderback(target_Node)
-#checkEachA()
+
+startNode = Node("a", None, (startX, startY))
+targetNode = Node("z", None, (targetX, targetY))
+
+AStarS2T(startNode, targetNode)
+AStarT2S(targetNode, "a")
