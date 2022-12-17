@@ -1,0 +1,1070 @@
+nils@MacBook-Air-von-Nils 16 % /opt/homebrew/bin/python3 /Users/nils/Library/CloudStorage/OneDrive-Persönlich/Dokumente/Coden/AdventOfCode/2022
+/16/16.py
+['AA', 'BB', 'CC', 'DD', 'EE', 'HH', 'JJ']: 1359
+['AA', 'BB', 'CC', 'DD', 'EE', 'HH']: 1007
+['AA', 'BB', 'CC', 'DD', 'EE', 'JJ', 'HH']: 1319
+['AA', 'BB', 'CC', 'DD', 'EE', 'JJ']: 1004
+['AA', 'BB', 'CC', 'DD', 'HH', 'EE', 'JJ']: 1366
+['AA', 'BB', 'CC', 'DD', 'HH', 'EE']: 1318
+['AA', 'BB', 'CC', 'DD', 'HH', 'JJ', 'EE']: 1482
+['AA', 'BB', 'CC', 'DD', 'HH', 'JJ']: 1230
+['AA', 'BB', 'CC', 'DD', 'JJ', 'EE', 'HH']: 1369
+['AA', 'BB', 'CC', 'DD', 'JJ', 'EE']: 1318
+['AA', 'BB', 'CC', 'DD', 'JJ', 'HH', 'EE']: 1563
+['AA', 'BB', 'CC', 'DD', 'JJ', 'HH']: 1255
+['AA', 'BB', 'CC', 'EE', 'DD', 'HH', 'JJ']: 1219
+['AA', 'BB', 'CC', 'EE', 'DD', 'JJ', 'HH']: 1246
+['AA', 'BB', 'CC', 'EE', 'HH', 'DD', 'JJ']: 1223
+['AA', 'BB', 'CC', 'EE', 'HH', 'JJ', 'DD']: 1110
+['AA', 'BB', 'CC', 'EE', 'JJ', 'DD', 'HH']: 1181
+['AA', 'BB', 'CC', 'EE', 'JJ', 'HH', 'DD']: 1039
+['AA', 'BB', 'CC', 'HH', 'DD', 'EE', 'JJ']: 1230
+['AA', 'BB', 'CC', 'HH', 'DD', 'EE']: 1188
+['AA', 'BB', 'CC', 'HH', 'DD', 'JJ', 'EE']: 1400
+['AA', 'BB', 'CC', 'HH', 'DD', 'JJ']: 1148
+['AA', 'BB', 'CC', 'HH', 'EE', 'DD', 'JJ']: 1227
+['AA', 'BB', 'CC', 'HH', 'EE', 'JJ', 'DD']: 1171
+['AA', 'BB', 'CC', 'HH', 'JJ', 'DD', 'EE']: 1275
+['AA', 'BB', 'CC', 'HH', 'JJ', 'DD']: 1035
+['AA', 'BB', 'CC', 'HH', 'JJ', 'EE', 'DD']: 1047
+['AA', 'BB', 'CC', 'HH', 'JJ', 'EE']: 1014
+['AA', 'BB', 'CC', 'JJ', 'DD', 'EE', 'HH']: 1304
+['AA', 'BB', 'CC', 'JJ', 'DD', 'EE']: 1253
+['AA', 'BB', 'CC', 'JJ', 'DD', 'HH', 'EE']: 1501
+['AA', 'BB', 'CC', 'JJ', 'DD', 'HH']: 1193
+['AA', 'BB', 'CC', 'JJ', 'EE', 'DD', 'HH']: 1189
+['AA', 'BB', 'CC', 'JJ', 'EE', 'HH', 'DD']: 1169
+['AA', 'BB', 'CC', 'JJ', 'HH', 'DD', 'EE']: 1295
+['AA', 'BB', 'CC', 'JJ', 'HH', 'DD']: 1055
+['AA', 'BB', 'CC', 'JJ', 'HH', 'EE', 'DD']: 1116
+['AA', 'BB', 'CC', 'JJ', 'HH', 'EE']: 1077
+['AA', 'BB', 'DD', 'CC', 'EE', 'HH', 'JJ']: 1290
+['AA', 'BB', 'DD', 'CC', 'EE', 'JJ', 'HH']: 1252
+['AA', 'BB', 'DD', 'CC', 'HH', 'EE', 'JJ']: 1351
+['AA', 'BB', 'DD', 'CC', 'HH', 'EE']: 1309
+['AA', 'BB', 'DD', 'CC', 'HH', 'JJ', 'EE']: 1431
+['AA', 'BB', 'DD', 'CC', 'HH', 'JJ']: 1221
+['AA', 'BB', 'DD', 'CC', 'JJ', 'EE', 'HH']: 1338
+['AA', 'BB', 'DD', 'CC', 'JJ', 'EE']: 1293
+['AA', 'BB', 'DD', 'CC', 'JJ', 'HH', 'EE']: 1494
+['AA', 'BB', 'DD', 'CC', 'JJ', 'HH']: 1230
+['AA', 'BB', 'DD', 'EE', 'CC', 'HH', 'JJ']: 1245
+['AA', 'BB', 'DD', 'EE', 'CC', 'JJ', 'HH']: 1256
+['AA', 'BB', 'DD', 'EE', 'HH', 'CC', 'JJ']: 1364
+['AA', 'BB', 'DD', 'EE', 'HH', 'CC']: 1336
+['AA', 'BB', 'DD', 'EE', 'HH', 'JJ', 'CC']: 1544
+['AA', 'BB', 'DD', 'EE', 'HH', 'JJ']: 1292
+['AA', 'BB', 'DD', 'EE', 'JJ', 'CC', 'HH']: 1341
+['AA', 'BB', 'DD', 'EE', 'JJ', 'CC']: 1315
+['AA', 'BB', 'DD', 'EE', 'JJ', 'HH', 'CC']: 1472
+['AA', 'BB', 'DD', 'EE', 'JJ', 'HH']: 1252
+['AA', 'BB', 'DD', 'HH', 'CC', 'EE', 'JJ']: 1275
+['AA', 'BB', 'DD', 'HH', 'CC', 'EE']: 1239
+['AA', 'BB', 'DD', 'HH', 'CC', 'JJ', 'EE']: 1445
+['AA', 'BB', 'DD', 'HH', 'CC', 'JJ']: 1235
+['AA', 'BB', 'DD', 'HH', 'CC']: 1207
+['AA', 'BB', 'DD', 'HH', 'EE', 'CC', 'JJ']: 1333
+['AA', 'BB', 'DD', 'HH', 'EE', 'CC']: 1305
+['AA', 'BB', 'DD', 'HH', 'EE', 'JJ', 'CC']: 1551
+['AA', 'BB', 'DD', 'HH', 'EE', 'JJ']: 1299
+['AA', 'BB', 'DD', 'HH', 'EE']: 1251
+['AA', 'BB', 'DD', 'HH', 'JJ', 'CC', 'EE']: 1435
+['AA', 'BB', 'DD', 'HH', 'JJ', 'CC']: 1415
+['AA', 'BB', 'DD', 'HH', 'JJ', 'EE', 'CC']: 1445
+['AA', 'BB', 'DD', 'HH', 'JJ', 'EE']: 1415
+['AA', 'BB', 'DD', 'HH', 'JJ']: 1163
+['AA', 'BB', 'DD', 'JJ', 'CC', 'EE', 'HH']: 1332
+['AA', 'BB', 'DD', 'JJ', 'CC', 'EE']: 1287
+['AA', 'BB', 'DD', 'JJ', 'CC', 'HH', 'EE']: 1545
+['AA', 'BB', 'DD', 'JJ', 'CC', 'HH']: 1281
+['AA', 'BB', 'DD', 'JJ', 'CC']: 1251
+['AA', 'BB', 'DD', 'JJ', 'EE', 'CC', 'HH']: 1331
+['AA', 'BB', 'DD', 'JJ', 'EE', 'CC']: 1305
+['AA', 'BB', 'DD', 'JJ', 'EE', 'HH', 'CC']: 1566
+['AA', 'BB', 'DD', 'JJ', 'EE', 'HH']: 1302
+['AA', 'BB', 'DD', 'JJ', 'EE']: 1251
+['AA', 'BB', 'DD', 'JJ', 'HH', 'CC', 'EE']: 1472
+['AA', 'BB', 'DD', 'JJ', 'HH', 'CC']: 1452
+['AA', 'BB', 'DD', 'JJ', 'HH', 'EE', 'CC']: 1532
+['AA', 'BB', 'DD', 'JJ', 'HH', 'EE']: 1496
+['AA', 'BB', 'DD', 'JJ', 'HH']: 1188
+['AA', 'BB', 'EE', 'CC', 'DD', 'HH', 'JJ']: 1100
+['AA', 'BB', 'EE', 'CC', 'DD', 'JJ', 'HH']: 1129
+['AA', 'BB', 'EE', 'CC', 'HH', 'DD', 'JJ']: 1018
+['AA', 'BB', 'EE', 'CC', 'JJ', 'DD', 'HH']: 1067
+['AA', 'BB', 'EE', 'DD', 'CC', 'HH', 'JJ']: 1195
+['AA', 'BB', 'EE', 'DD', 'CC', 'JJ', 'HH']: 1206
+['AA', 'BB', 'EE', 'DD', 'HH', 'CC', 'JJ']: 1209
+['AA', 'BB', 'EE', 'DD', 'HH', 'CC']: 1185
+['AA', 'BB', 'EE', 'DD', 'HH', 'JJ', 'CC']: 1351
+['AA', 'BB', 'EE', 'DD', 'HH', 'JJ']: 1141
+['AA', 'BB', 'EE', 'DD', 'JJ', 'CC', 'HH']: 1257
+['AA', 'BB', 'EE', 'DD', 'JJ', 'CC']: 1231
+['AA', 'BB', 'EE', 'DD', 'JJ', 'HH', 'CC']: 1388
+['AA', 'BB', 'EE', 'DD', 'JJ', 'HH']: 1168
+['AA', 'BB', 'EE', 'HH', 'CC', 'DD', 'JJ']: 1117
+['AA', 'BB', 'EE', 'HH', 'CC', 'JJ', 'DD']: 1062
+['AA', 'BB', 'EE', 'HH', 'DD', 'CC', 'JJ']: 1213
+['AA', 'BB', 'EE', 'HH', 'DD', 'CC']: 1185
+['AA', 'BB', 'EE', 'HH', 'DD', 'JJ', 'CC']: 1397
+['AA', 'BB', 'EE', 'HH', 'DD', 'JJ']: 1145
+['AA', 'BB', 'EE', 'HH', 'JJ', 'CC', 'DD']: 1033
+['AA', 'BB', 'EE', 'HH', 'JJ', 'CC']: 1011
+['AA', 'BB', 'EE', 'HH', 'JJ', 'DD', 'CC']: 1272
+['AA', 'BB', 'EE', 'HH', 'JJ', 'DD']: 1032
+['AA', 'BB', 'EE', 'JJ', 'CC', 'DD', 'HH']: 1076
+['AA', 'BB', 'EE', 'JJ', 'CC', 'HH', 'DD']: 1006
+['AA', 'BB', 'EE', 'JJ', 'DD', 'CC', 'HH']: 1189
+['AA', 'BB', 'EE', 'JJ', 'DD', 'CC']: 1163
+['AA', 'BB', 'EE', 'JJ', 'DD', 'HH', 'CC']: 1323
+['AA', 'BB', 'EE', 'JJ', 'DD', 'HH']: 1103
+['AA', 'BB', 'EE', 'JJ', 'HH', 'DD', 'CC']: 1161
+['AA', 'BB', 'HH', 'CC', 'DD', 'EE', 'JJ']: 1085
+['AA', 'BB', 'HH', 'CC', 'DD', 'EE']: 1049
+['AA', 'BB', 'HH', 'CC', 'DD', 'JJ', 'EE']: 1219
+['AA', 'BB', 'HH', 'CC', 'DD', 'JJ']: 1009
+['AA', 'BB', 'HH', 'CC', 'EE', 'DD', 'JJ']: 1012
+['AA', 'BB', 'HH', 'CC', 'JJ', 'DD', 'EE']: 1154
+['AA', 'BB', 'HH', 'DD', 'CC', 'EE', 'JJ']: 1145
+['AA', 'BB', 'HH', 'DD', 'CC', 'EE']: 1109
+['AA', 'BB', 'HH', 'DD', 'CC', 'JJ', 'EE']: 1315
+['AA', 'BB', 'HH', 'DD', 'CC', 'JJ']: 1105
+['AA', 'BB', 'HH', 'DD', 'CC']: 1077
+['AA', 'BB', 'HH', 'DD', 'EE', 'CC', 'JJ']: 1149
+['AA', 'BB', 'HH', 'DD', 'EE', 'CC']: 1125
+['AA', 'BB', 'HH', 'DD', 'EE', 'JJ', 'CC']: 1329
+['AA', 'BB', 'HH', 'DD', 'EE', 'JJ']: 1119
+['AA', 'BB', 'HH', 'DD', 'EE']: 1077
+['AA', 'BB', 'HH', 'DD', 'JJ', 'CC', 'EE']: 1309
+['AA', 'BB', 'HH', 'DD', 'JJ', 'CC']: 1289
+['AA', 'BB', 'HH', 'DD', 'JJ', 'EE', 'CC']: 1319
+['AA', 'BB', 'HH', 'DD', 'JJ', 'EE']: 1289
+['AA', 'BB', 'HH', 'DD', 'JJ']: 1037
+['AA', 'BB', 'HH', 'EE', 'CC', 'DD', 'JJ']: 1107
+['AA', 'BB', 'HH', 'EE', 'CC', 'JJ', 'DD']: 1052
+['AA', 'BB', 'HH', 'EE', 'DD', 'CC', 'JJ']: 1184
+['AA', 'BB', 'HH', 'EE', 'DD', 'CC']: 1156
+['AA', 'BB', 'HH', 'EE', 'DD', 'JJ', 'CC']: 1368
+['AA', 'BB', 'HH', 'EE', 'DD', 'JJ']: 1116
+['AA', 'BB', 'HH', 'EE', 'JJ', 'CC', 'DD']: 1061
+['AA', 'BB', 'HH', 'EE', 'JJ', 'CC']: 1039
+['AA', 'BB', 'HH', 'EE', 'JJ', 'DD', 'CC']: 1300
+['AA', 'BB', 'HH', 'EE', 'JJ', 'DD']: 1060
+['AA', 'BB', 'HH', 'JJ', 'CC', 'DD', 'EE']: 1125
+['AA', 'BB', 'HH', 'JJ', 'DD', 'CC', 'EE']: 1184
+['AA', 'BB', 'HH', 'JJ', 'DD', 'CC']: 1164
+['AA', 'BB', 'HH', 'JJ', 'DD', 'EE', 'CC']: 1194
+['AA', 'BB', 'HH', 'JJ', 'DD', 'EE']: 1164
+['AA', 'BB', 'HH', 'JJ', 'EE', 'DD', 'CC']: 1136
+['AA', 'BB', 'JJ', 'CC', 'DD', 'EE', 'HH']: 1293
+['AA', 'BB', 'JJ', 'CC', 'DD', 'EE']: 1242
+['AA', 'BB', 'JJ', 'CC', 'DD', 'HH', 'EE']: 1490
+['AA', 'BB', 'JJ', 'CC', 'DD', 'HH']: 1182
+['AA', 'BB', 'JJ', 'CC', 'EE', 'DD', 'HH']: 1197
+['AA', 'BB', 'JJ', 'CC', 'EE', 'HH', 'DD']: 1177
+['AA', 'BB', 'JJ', 'CC', 'HH', 'DD', 'EE']: 1360
+['AA', 'BB', 'JJ', 'CC', 'HH', 'DD']: 1120
+['AA', 'BB', 'JJ', 'CC', 'HH', 'EE', 'DD']: 1181
+['AA', 'BB', 'JJ', 'CC', 'HH', 'EE']: 1142
+['AA', 'BB', 'JJ', 'DD', 'CC', 'EE', 'HH']: 1352
+['AA', 'BB', 'JJ', 'DD', 'CC', 'EE']: 1301
+['AA', 'BB', 'JJ', 'DD', 'CC', 'HH', 'EE']: 1603
+['AA', 'BB', 'JJ', 'DD', 'CC', 'HH']: 1295
+['AA', 'BB', 'JJ', 'DD', 'CC']: 1261
+['AA', 'BB', 'JJ', 'DD', 'EE', 'CC', 'HH']: 1351
+['AA', 'BB', 'JJ', 'DD', 'EE', 'CC']: 1321
+['AA', 'BB', 'JJ', 'DD', 'EE', 'HH', 'CC']: 1626
+['AA', 'BB', 'JJ', 'DD', 'EE', 'HH']: 1318
+['AA', 'BB', 'JJ', 'DD', 'EE']: 1261
+['AA', 'BB', 'JJ', 'DD', 'HH', 'CC', 'EE']: 1533
+['AA', 'BB', 'JJ', 'DD', 'HH', 'CC']: 1509
+['AA', 'BB', 'JJ', 'DD', 'HH', 'EE', 'CC']: 1595
+['AA', 'BB', 'JJ', 'DD', 'HH', 'EE']: 1553
+['AA', 'BB', 'JJ', 'DD', 'HH']: 1201
+['AA', 'BB', 'JJ', 'EE', 'CC', 'DD', 'HH']: 1198
+['AA', 'BB', 'JJ', 'EE', 'CC', 'HH', 'DD']: 1132
+['AA', 'BB', 'JJ', 'EE', 'DD', 'CC', 'HH']: 1293
+['AA', 'BB', 'JJ', 'EE', 'DD', 'CC']: 1263
+['AA', 'BB', 'JJ', 'EE', 'DD', 'HH', 'CC']: 1467
+['AA', 'BB', 'JJ', 'EE', 'DD', 'HH']: 1203
+['AA', 'BB', 'JJ', 'EE', 'HH', 'CC', 'DD']: 1191
+['AA', 'BB', 'JJ', 'EE', 'HH', 'CC']: 1165
+['AA', 'BB', 'JJ', 'EE', 'HH', 'DD', 'CC']: 1467
+['AA', 'BB', 'JJ', 'EE', 'HH', 'DD']: 1187
+['AA', 'BB', 'JJ', 'HH', 'CC', 'DD', 'EE']: 1311
+['AA', 'BB', 'JJ', 'HH', 'CC', 'DD']: 1071
+['AA', 'BB', 'JJ', 'HH', 'CC', 'EE', 'DD']: 1102
+['AA', 'BB', 'JJ', 'HH', 'CC', 'EE']: 1069
+['AA', 'BB', 'JJ', 'HH', 'CC']: 1045
+['AA', 'BB', 'JJ', 'HH', 'DD', 'CC', 'EE']: 1371
+['AA', 'BB', 'JJ', 'HH', 'DD', 'CC']: 1347
+['AA', 'BB', 'JJ', 'HH', 'DD', 'EE', 'CC']: 1383
+['AA', 'BB', 'JJ', 'HH', 'DD', 'EE']: 1347
+['AA', 'BB', 'JJ', 'HH', 'DD']: 1067
+['AA', 'BB', 'JJ', 'HH', 'EE', 'CC', 'DD']: 1157
+['AA', 'BB', 'JJ', 'HH', 'EE', 'CC']: 1131
+['AA', 'BB', 'JJ', 'HH', 'EE', 'DD', 'CC']: 1414
+['AA', 'BB', 'JJ', 'HH', 'EE', 'DD']: 1134
+['AA', 'BB', 'JJ', 'HH', 'EE']: 1089
+['AA', 'CC', 'BB', 'DD', 'EE', 'HH', 'JJ']: 1230
+['AA', 'CC', 'BB', 'DD', 'EE', 'JJ', 'HH']: 1192
+['AA', 'CC', 'BB', 'DD', 'HH', 'EE', 'JJ']: 1237
+['AA', 'CC', 'BB', 'DD', 'HH', 'EE']: 1195
+['AA', 'CC', 'BB', 'DD', 'HH', 'JJ', 'EE']: 1317
+['AA', 'CC', 'BB', 'DD', 'HH', 'JJ']: 1107
+['AA', 'CC', 'BB', 'DD', 'JJ', 'EE', 'HH']: 1242
+['AA', 'CC', 'BB', 'DD', 'JJ', 'EE']: 1197
+['AA', 'CC', 'BB', 'DD', 'JJ', 'HH', 'EE']: 1398
+['AA', 'CC', 'BB', 'DD', 'JJ', 'HH']: 1134
+['AA', 'CC', 'BB', 'EE', 'DD', 'HH', 'JJ']: 1079
+['AA', 'CC', 'BB', 'EE', 'DD', 'JJ', 'HH']: 1108
+['AA', 'CC', 'BB', 'EE', 'HH', 'DD', 'JJ']: 1083
+['AA', 'CC', 'BB', 'EE', 'JJ', 'DD', 'HH']: 1043
+['AA', 'CC', 'BB', 'HH', 'DD', 'EE', 'JJ']: 1057
+['AA', 'CC', 'BB', 'HH', 'DD', 'EE']: 1021
+['AA', 'CC', 'BB', 'HH', 'DD', 'JJ', 'EE']: 1191
+['AA', 'CC', 'BB', 'HH', 'EE', 'DD', 'JJ']: 1054
+['AA', 'CC', 'BB', 'HH', 'JJ', 'DD', 'EE']: 1066
+['AA', 'CC', 'BB', 'JJ', 'DD', 'EE', 'HH']: 1258
+['AA', 'CC', 'BB', 'JJ', 'DD', 'EE']: 1207
+['AA', 'CC', 'BB', 'JJ', 'DD', 'HH', 'EE']: 1455
+['AA', 'CC', 'BB', 'JJ', 'DD', 'HH']: 1147
+['AA', 'CC', 'BB', 'JJ', 'EE', 'DD', 'HH']: 1143
+['AA', 'CC', 'BB', 'JJ', 'EE', 'HH', 'DD']: 1123
+['AA', 'CC', 'BB', 'JJ', 'HH', 'DD', 'EE']: 1249
+['AA', 'CC', 'BB', 'JJ', 'HH', 'DD']: 1009
+['AA', 'CC', 'BB', 'JJ', 'HH', 'EE', 'DD']: 1070
+['AA', 'CC', 'BB', 'JJ', 'HH', 'EE']: 1031
+['AA', 'CC', 'DD', 'BB', 'EE', 'HH', 'JJ']: 1161
+['AA', 'CC', 'DD', 'BB', 'EE', 'JJ', 'HH']: 1125
+['AA', 'CC', 'DD', 'BB', 'HH', 'EE', 'JJ']: 1189
+['AA', 'CC', 'DD', 'BB', 'HH', 'EE']: 1153
+['AA', 'CC', 'DD', 'BB', 'HH', 'JJ', 'EE']: 1233
+['AA', 'CC', 'DD', 'BB', 'HH', 'JJ']: 1065
+['AA', 'CC', 'DD', 'BB', 'JJ', 'EE', 'HH']: 1263
+['AA', 'CC', 'DD', 'BB', 'JJ', 'EE']: 1218
+['AA', 'CC', 'DD', 'BB', 'JJ', 'HH', 'EE']: 1419
+['AA', 'CC', 'DD', 'BB', 'JJ', 'HH']: 1155
+['AA', 'CC', 'DD', 'EE', 'BB', 'HH', 'JJ']: 1084
+['AA', 'CC', 'DD', 'EE', 'BB', 'JJ', 'HH']: 1176
+['AA', 'CC', 'DD', 'EE', 'HH', 'BB', 'JJ']: 1199
+['AA', 'CC', 'DD', 'EE', 'HH', 'BB']: 1017
+['AA', 'CC', 'DD', 'EE', 'HH', 'JJ', 'BB']: 1268
+['AA', 'CC', 'DD', 'EE', 'JJ', 'BB', 'HH']: 1208
+['AA', 'CC', 'DD', 'EE', 'JJ', 'BB']: 1039
+['AA', 'CC', 'DD', 'EE', 'JJ', 'HH', 'BB']: 1153
+['AA', 'CC', 'DD', 'HH', 'BB', 'EE', 'JJ']: 1100
+['AA', 'CC', 'DD', 'HH', 'BB', 'EE']: 1070
+['AA', 'CC', 'DD', 'HH', 'BB', 'JJ', 'EE']: 1280
+['AA', 'CC', 'DD', 'HH', 'BB', 'JJ']: 1070
+['AA', 'CC', 'DD', 'HH', 'EE', 'BB', 'JJ']: 1187
+['AA', 'CC', 'DD', 'HH', 'EE', 'BB']: 1005
+['AA', 'CC', 'DD', 'HH', 'EE', 'JJ', 'BB']: 1275
+['AA', 'CC', 'DD', 'HH', 'EE', 'JJ']: 1002
+['AA', 'CC', 'DD', 'HH', 'JJ', 'BB', 'EE']: 1269
+['AA', 'CC', 'DD', 'HH', 'JJ', 'BB']: 1139
+['AA', 'CC', 'DD', 'HH', 'JJ', 'EE', 'BB']: 1145
+['AA', 'CC', 'DD', 'HH', 'JJ', 'EE']: 1118
+['AA', 'CC', 'DD', 'JJ', 'BB', 'EE', 'HH']: 1254
+['AA', 'CC', 'DD', 'JJ', 'BB', 'EE']: 1209
+['AA', 'CC', 'DD', 'JJ', 'BB', 'HH', 'EE']: 1434
+['AA', 'CC', 'DD', 'JJ', 'BB', 'HH']: 1170
+['AA', 'CC', 'DD', 'JJ', 'EE', 'BB', 'HH']: 1148
+['AA', 'CC', 'DD', 'JJ', 'EE', 'BB']: 1005
+['AA', 'CC', 'DD', 'JJ', 'EE', 'HH', 'BB']: 1247
+['AA', 'CC', 'DD', 'JJ', 'EE', 'HH']: 1005
+['AA', 'CC', 'DD', 'JJ', 'HH', 'BB', 'EE']: 1237
+['AA', 'CC', 'DD', 'JJ', 'HH', 'BB']: 1133
+['AA', 'CC', 'DD', 'JJ', 'HH', 'EE', 'BB']: 1232
+['AA', 'CC', 'DD', 'JJ', 'HH', 'EE']: 1199
+['AA', 'CC', 'EE', 'DD', 'BB', 'HH', 'JJ']: 1028
+['AA', 'CC', 'EE', 'DD', 'BB', 'JJ', 'HH']: 1120
+['AA', 'CC', 'EE', 'DD', 'HH', 'BB', 'JJ']: 1033
+['AA', 'CC', 'EE', 'DD', 'HH', 'JJ', 'BB']: 1086
+['AA', 'CC', 'EE', 'DD', 'JJ', 'BB', 'HH']: 1135
+['AA', 'CC', 'EE', 'DD', 'JJ', 'HH', 'BB']: 1080
+['AA', 'CC', 'EE', 'HH', 'DD', 'BB', 'JJ']: 1061
+['AA', 'CC', 'EE', 'HH', 'DD', 'JJ', 'BB']: 1132
+['AA', 'CC', 'EE', 'JJ', 'DD', 'HH', 'BB']: 1015
+['AA', 'CC', 'HH', 'BB', 'DD', 'JJ', 'EE']: 1023
+['AA', 'CC', 'HH', 'BB', 'JJ', 'DD', 'EE']: 1033
+['AA', 'CC', 'HH', 'DD', 'BB', 'EE', 'JJ']: 1016
+['AA', 'CC', 'HH', 'DD', 'BB', 'JJ', 'EE']: 1196
+['AA', 'CC', 'HH', 'DD', 'EE', 'BB', 'JJ']: 1025
+['AA', 'CC', 'HH', 'DD', 'EE', 'JJ', 'BB']: 1097
+['AA', 'CC', 'HH', 'DD', 'JJ', 'BB', 'EE']: 1187
+['AA', 'CC', 'HH', 'DD', 'JJ', 'BB']: 1057
+['AA', 'CC', 'HH', 'DD', 'JJ', 'EE', 'BB']: 1063
+['AA', 'CC', 'HH', 'DD', 'JJ', 'EE']: 1036
+['AA', 'CC', 'HH', 'EE', 'DD', 'BB', 'JJ']: 1065
+['AA', 'CC', 'HH', 'EE', 'DD', 'JJ', 'BB']: 1136
+['AA', 'CC', 'HH', 'EE', 'JJ', 'DD', 'BB']: 1027
+['AA', 'CC', 'HH', 'JJ', 'BB', 'DD', 'EE']: 1014
+['AA', 'CC', 'JJ', 'BB', 'DD', 'EE', 'HH']: 1141
+['AA', 'CC', 'JJ', 'BB', 'DD', 'EE']: 1096
+['AA', 'CC', 'JJ', 'BB', 'DD', 'HH', 'EE']: 1300
+['AA', 'CC', 'JJ', 'BB', 'DD', 'HH']: 1036
+['AA', 'CC', 'JJ', 'BB', 'EE', 'DD', 'HH']: 1034
+['AA', 'CC', 'JJ', 'BB', 'EE', 'HH', 'DD']: 1010
+['AA', 'CC', 'JJ', 'BB', 'HH', 'DD', 'EE']: 1126
+['AA', 'CC', 'JJ', 'DD', 'BB', 'EE', 'HH']: 1116
+['AA', 'CC', 'JJ', 'DD', 'BB', 'EE']: 1077
+['AA', 'CC', 'JJ', 'DD', 'BB', 'HH', 'EE']: 1258
+['AA', 'CC', 'JJ', 'DD', 'BB', 'HH']: 1038
+['AA', 'CC', 'JJ', 'DD', 'EE', 'BB', 'HH']: 1083
+['AA', 'CC', 'JJ', 'DD', 'EE', 'HH', 'BB']: 1182
+['AA', 'CC', 'JJ', 'DD', 'HH', 'BB', 'EE']: 1175
+['AA', 'CC', 'JJ', 'DD', 'HH', 'BB']: 1071
+['AA', 'CC', 'JJ', 'DD', 'HH', 'EE', 'BB']: 1170
+['AA', 'CC', 'JJ', 'DD', 'HH', 'EE']: 1137
+['AA', 'CC', 'JJ', 'EE', 'DD', 'BB', 'HH']: 1008
+['AA', 'CC', 'JJ', 'EE', 'DD', 'HH', 'BB']: 1023
+['AA', 'CC', 'JJ', 'EE', 'HH', 'DD', 'BB']: 1025
+['AA', 'CC', 'JJ', 'HH', 'DD', 'BB', 'EE']: 1015
+['AA', 'DD', 'BB', 'CC', 'EE', 'HH', 'JJ']: 1297
+['AA', 'DD', 'BB', 'CC', 'EE', 'JJ', 'HH']: 1259
+['AA', 'DD', 'BB', 'CC', 'HH', 'EE', 'JJ']: 1358
+['AA', 'DD', 'BB', 'CC', 'HH', 'EE']: 1316
+['AA', 'DD', 'BB', 'CC', 'HH', 'JJ', 'EE']: 1438
+['AA', 'DD', 'BB', 'CC', 'HH', 'JJ']: 1228
+['AA', 'DD', 'BB', 'CC', 'JJ', 'EE', 'HH']: 1345
+['AA', 'DD', 'BB', 'CC', 'JJ', 'EE']: 1300
+['AA', 'DD', 'BB', 'CC', 'JJ', 'HH', 'EE']: 1501
+['AA', 'DD', 'BB', 'CC', 'JJ', 'HH']: 1237
+['AA', 'DD', 'BB', 'EE', 'CC', 'HH', 'JJ']: 1172
+['AA', 'DD', 'BB', 'EE', 'CC', 'JJ', 'HH']: 1185
+['AA', 'DD', 'BB', 'EE', 'HH', 'CC', 'JJ']: 1291
+['AA', 'DD', 'BB', 'EE', 'HH', 'CC']: 1267
+['AA', 'DD', 'BB', 'EE', 'HH', 'JJ', 'CC']: 1433
+['AA', 'DD', 'BB', 'EE', 'HH', 'JJ']: 1223
+['AA', 'DD', 'BB', 'EE', 'JJ', 'CC', 'HH']: 1270
+['AA', 'DD', 'BB', 'EE', 'JJ', 'CC']: 1248
+['AA', 'DD', 'BB', 'EE', 'JJ', 'HH', 'CC']: 1361
+['AA', 'DD', 'BB', 'EE', 'JJ', 'HH']: 1185
+['AA', 'DD', 'BB', 'HH', 'CC', 'EE', 'JJ']: 1223
+['AA', 'DD', 'BB', 'HH', 'CC', 'EE']: 1193
+['AA', 'DD', 'BB', 'HH', 'CC', 'JJ', 'EE']: 1357
+['AA', 'DD', 'BB', 'HH', 'CC', 'JJ']: 1189
+['AA', 'DD', 'BB', 'HH', 'CC']: 1165
+['AA', 'DD', 'BB', 'HH', 'EE', 'CC', 'JJ']: 1281
+['AA', 'DD', 'BB', 'HH', 'EE', 'CC']: 1257
+['AA', 'DD', 'BB', 'HH', 'EE', 'JJ', 'CC']: 1461
+['AA', 'DD', 'BB', 'HH', 'EE', 'JJ']: 1251
+['AA', 'DD', 'BB', 'HH', 'EE']: 1209
+['AA', 'DD', 'BB', 'HH', 'JJ', 'CC', 'EE']: 1347
+['AA', 'DD', 'BB', 'HH', 'JJ', 'CC']: 1331
+['AA', 'DD', 'BB', 'HH', 'JJ', 'EE', 'CC']: 1355
+['AA', 'DD', 'BB', 'HH', 'JJ', 'EE']: 1331
+['AA', 'DD', 'BB', 'HH', 'JJ']: 1121
+['AA', 'DD', 'BB', 'JJ', 'CC', 'EE', 'HH']: 1353
+['AA', 'DD', 'BB', 'JJ', 'CC', 'EE']: 1308
+['AA', 'DD', 'BB', 'JJ', 'CC', 'HH', 'EE']: 1566
+['AA', 'DD', 'BB', 'JJ', 'CC', 'HH']: 1302
+['AA', 'DD', 'BB', 'JJ', 'CC']: 1272
+['AA', 'DD', 'BB', 'JJ', 'EE', 'CC', 'HH']: 1352
+['AA', 'DD', 'BB', 'JJ', 'EE', 'CC']: 1326
+['AA', 'DD', 'BB', 'JJ', 'EE', 'HH', 'CC']: 1587
+['AA', 'DD', 'BB', 'JJ', 'EE', 'HH']: 1323
+['AA', 'DD', 'BB', 'JJ', 'EE']: 1272
+['AA', 'DD', 'BB', 'JJ', 'HH', 'CC', 'EE']: 1493
+['AA', 'DD', 'BB', 'JJ', 'HH', 'CC']: 1473
+['AA', 'DD', 'BB', 'JJ', 'HH', 'EE', 'CC']: 1553
+['AA', 'DD', 'BB', 'JJ', 'HH', 'EE']: 1517
+['AA', 'DD', 'BB', 'JJ', 'HH']: 1209
+['AA', 'DD', 'CC', 'BB', 'EE', 'HH', 'JJ']: 1297
+['AA', 'DD', 'CC', 'BB', 'EE', 'JJ', 'HH']: 1259
+['AA', 'DD', 'CC', 'BB', 'HH', 'EE', 'JJ']: 1325
+['AA', 'DD', 'CC', 'BB', 'HH', 'EE']: 1283
+['AA', 'DD', 'CC', 'BB', 'HH', 'JJ', 'EE']: 1405
+['AA', 'DD', 'CC', 'BB', 'HH', 'JJ']: 1195
+['AA', 'DD', 'CC', 'BB', 'JJ', 'EE', 'HH']: 1397
+['AA', 'DD', 'CC', 'BB', 'JJ', 'EE']: 1346
+['AA', 'DD', 'CC', 'BB', 'JJ', 'HH', 'EE']: 1591
+['AA', 'DD', 'CC', 'BB', 'JJ', 'HH']: 1283
+['AA', 'DD', 'CC', 'EE', 'BB', 'HH', 'JJ']: 1122
+['AA', 'DD', 'CC', 'EE', 'BB', 'JJ', 'HH']: 1214
+['AA', 'DD', 'CC', 'EE', 'HH', 'BB', 'JJ']: 1237
+['AA', 'DD', 'CC', 'EE', 'HH', 'BB']: 1055
+['AA', 'DD', 'CC', 'EE', 'HH', 'JJ', 'BB']: 1306
+['AA', 'DD', 'CC', 'EE', 'HH', 'JJ']: 1033
+['AA', 'DD', 'CC', 'EE', 'JJ', 'BB', 'HH']: 1246
+['AA', 'DD', 'CC', 'EE', 'JJ', 'BB']: 1077
+['AA', 'DD', 'CC', 'EE', 'JJ', 'HH', 'BB']: 1191
+['AA', 'DD', 'CC', 'HH', 'BB', 'EE', 'JJ']: 1192
+['AA', 'DD', 'CC', 'HH', 'BB', 'EE']: 1162
+['AA', 'DD', 'CC', 'HH', 'BB', 'JJ', 'EE']: 1372
+['AA', 'DD', 'CC', 'HH', 'BB', 'JJ']: 1162
+['AA', 'DD', 'CC', 'HH', 'EE', 'BB', 'JJ']: 1279
+['AA', 'DD', 'CC', 'HH', 'EE', 'BB']: 1097
+['AA', 'DD', 'CC', 'HH', 'EE', 'JJ', 'BB']: 1367
+['AA', 'DD', 'CC', 'HH', 'EE', 'JJ']: 1094
+['AA', 'DD', 'CC', 'HH', 'EE']: 1046
+['AA', 'DD', 'CC', 'HH', 'JJ', 'BB', 'EE']: 1361
+['AA', 'DD', 'CC', 'HH', 'JJ', 'BB']: 1231
+['AA', 'DD', 'CC', 'HH', 'JJ', 'EE', 'BB']: 1237
+['AA', 'DD', 'CC', 'HH', 'JJ', 'EE']: 1210
+['AA', 'DD', 'CC', 'JJ', 'BB', 'EE', 'HH']: 1328
+['AA', 'DD', 'CC', 'JJ', 'BB', 'EE']: 1283
+['AA', 'DD', 'CC', 'JJ', 'BB', 'HH', 'EE']: 1508
+['AA', 'DD', 'CC', 'JJ', 'BB', 'HH']: 1244
+['AA', 'DD', 'CC', 'JJ', 'BB']: 1049
+['AA', 'DD', 'CC', 'JJ', 'EE', 'BB', 'HH']: 1222
+['AA', 'DD', 'CC', 'JJ', 'EE', 'BB']: 1079
+['AA', 'DD', 'CC', 'JJ', 'EE', 'HH', 'BB']: 1321
+['AA', 'DD', 'CC', 'JJ', 'EE', 'HH']: 1079
+['AA', 'DD', 'CC', 'JJ', 'EE']: 1028
+['AA', 'DD', 'CC', 'JJ', 'HH', 'BB', 'EE']: 1311
+['AA', 'DD', 'CC', 'JJ', 'HH', 'BB']: 1207
+['AA', 'DD', 'CC', 'JJ', 'HH', 'EE', 'BB']: 1306
+['AA', 'DD', 'CC', 'JJ', 'HH', 'EE']: 1273
+['AA', 'DD', 'EE', 'BB', 'CC', 'HH', 'JJ']: 1249
+['AA', 'DD', 'EE', 'BB', 'CC', 'JJ', 'HH']: 1260
+['AA', 'DD', 'EE', 'BB', 'HH', 'CC', 'JJ']: 1210
+['AA', 'DD', 'EE', 'BB', 'HH', 'CC']: 1190
+['AA', 'DD', 'EE', 'BB', 'HH', 'JJ', 'CC']: 1314
+['AA', 'DD', 'EE', 'BB', 'HH', 'JJ']: 1146
+['AA', 'DD', 'EE', 'BB', 'JJ', 'CC', 'HH']: 1325
+['AA', 'DD', 'EE', 'BB', 'JJ', 'CC']: 1299
+['AA', 'DD', 'EE', 'BB', 'JJ', 'HH', 'CC']: 1456
+['AA', 'DD', 'EE', 'BB', 'JJ', 'HH']: 1236
+['AA', 'DD', 'EE', 'CC', 'BB', 'HH', 'JJ']: 1199
+['AA', 'DD', 'EE', 'CC', 'BB', 'JJ', 'HH']: 1289
+['AA', 'DD', 'EE', 'CC', 'HH', 'BB', 'JJ']: 1166
+['AA', 'DD', 'EE', 'CC', 'HH', 'BB']: 1010
+['AA', 'DD', 'EE', 'CC', 'HH', 'JJ', 'BB']: 1219
+['AA', 'DD', 'EE', 'CC', 'JJ', 'BB', 'HH']: 1250
+['AA', 'DD', 'EE', 'CC', 'JJ', 'BB']: 1081
+['AA', 'DD', 'EE', 'CC', 'JJ', 'HH', 'BB']: 1195
+['AA', 'DD', 'EE', 'HH', 'BB', 'CC', 'JJ']: 1315
+['AA', 'DD', 'EE', 'HH', 'BB', 'CC']: 1287
+['AA', 'DD', 'EE', 'HH', 'BB', 'JJ', 'CC']: 1513
+['AA', 'DD', 'EE', 'HH', 'BB', 'JJ']: 1261
+['AA', 'DD', 'EE', 'HH', 'BB']: 1053
+['AA', 'DD', 'EE', 'HH', 'CC', 'BB', 'JJ']: 1321
+['AA', 'DD', 'EE', 'HH', 'CC', 'BB']: 1113
+['AA', 'DD', 'EE', 'HH', 'CC', 'JJ', 'BB']: 1380
+['AA', 'DD', 'EE', 'HH', 'CC', 'JJ']: 1107
+['AA', 'DD', 'EE', 'HH', 'CC']: 1075
+['AA', 'DD', 'EE', 'HH', 'JJ', 'BB', 'CC']: 1528
+['AA', 'DD', 'EE', 'HH', 'JJ', 'BB']: 1346
+['AA', 'DD', 'EE', 'HH', 'JJ', 'CC', 'BB']: 1351
+['AA', 'DD', 'EE', 'HH', 'JJ', 'CC']: 1325
+['AA', 'DD', 'EE', 'HH', 'JJ']: 1031
+['AA', 'DD', 'EE', 'JJ', 'BB', 'CC', 'HH']: 1363
+['AA', 'DD', 'EE', 'JJ', 'BB', 'CC']: 1333
+['AA', 'DD', 'EE', 'JJ', 'BB', 'HH', 'CC']: 1488
+['AA', 'DD', 'EE', 'JJ', 'BB', 'HH']: 1268
+['AA', 'DD', 'EE', 'JJ', 'BB']: 1073
+['AA', 'DD', 'EE', 'JJ', 'CC', 'BB', 'HH']: 1259
+['AA', 'DD', 'EE', 'JJ', 'CC', 'BB']: 1090
+['AA', 'DD', 'EE', 'JJ', 'CC', 'HH', 'BB']: 1280
+['AA', 'DD', 'EE', 'JJ', 'CC', 'HH']: 1082
+['AA', 'DD', 'EE', 'JJ', 'CC']: 1052
+['AA', 'DD', 'EE', 'JJ', 'HH', 'BB', 'CC']: 1361
+['AA', 'DD', 'EE', 'JJ', 'HH', 'BB']: 1231
+['AA', 'DD', 'EE', 'JJ', 'HH', 'CC', 'BB']: 1275
+['AA', 'DD', 'EE', 'JJ', 'HH', 'CC']: 1253
+['AA', 'DD', 'HH', 'BB', 'CC', 'EE', 'JJ']: 1220
+['AA', 'DD', 'HH', 'BB', 'CC', 'EE']: 1184
+['AA', 'DD', 'HH', 'BB', 'CC', 'JJ', 'EE']: 1390
+['AA', 'DD', 'HH', 'BB', 'CC', 'JJ']: 1180
+['AA', 'DD', 'HH', 'BB', 'CC']: 1152
+['AA', 'DD', 'HH', 'BB', 'EE', 'CC', 'JJ']: 1188
+['AA', 'DD', 'HH', 'BB', 'EE', 'CC']: 1168
+['AA', 'DD', 'HH', 'BB', 'EE', 'JJ', 'CC']: 1330
+['AA', 'DD', 'HH', 'BB', 'EE', 'JJ']: 1162
+['AA', 'DD', 'HH', 'BB', 'EE']: 1126
+['AA', 'DD', 'HH', 'BB', 'JJ', 'CC', 'EE']: 1398
+['AA', 'DD', 'HH', 'BB', 'JJ', 'CC']: 1378
+['AA', 'DD', 'HH', 'BB', 'JJ', 'EE', 'CC']: 1408
+['AA', 'DD', 'HH', 'BB', 'JJ', 'EE']: 1378
+['AA', 'DD', 'HH', 'BB', 'JJ']: 1126
+['AA', 'DD', 'HH', 'CC', 'BB', 'EE', 'JJ']: 1222
+['AA', 'DD', 'HH', 'CC', 'BB', 'EE']: 1186
+['AA', 'DD', 'HH', 'CC', 'BB', 'JJ', 'EE']: 1438
+['AA', 'DD', 'HH', 'CC', 'BB', 'JJ']: 1186
+['AA', 'DD', 'HH', 'CC', 'EE', 'BB', 'JJ']: 1177
+['AA', 'DD', 'HH', 'CC', 'EE', 'BB']: 1021
+['AA', 'DD', 'HH', 'CC', 'EE', 'JJ', 'BB']: 1249
+['AA', 'DD', 'HH', 'CC', 'EE', 'JJ']: 1018
+['AA', 'DD', 'HH', 'CC', 'JJ', 'BB', 'EE']: 1375
+['AA', 'DD', 'HH', 'CC', 'JJ', 'BB']: 1245
+['AA', 'DD', 'HH', 'CC', 'JJ', 'EE', 'BB']: 1251
+['AA', 'DD', 'HH', 'CC', 'JJ', 'EE']: 1224
+['AA', 'DD', 'HH', 'EE', 'BB', 'CC', 'JJ']: 1303
+['AA', 'DD', 'HH', 'EE', 'BB', 'CC']: 1275
+['AA', 'DD', 'HH', 'EE', 'BB', 'JJ', 'CC']: 1501
+['AA', 'DD', 'HH', 'EE', 'BB', 'JJ']: 1249
+['AA', 'DD', 'HH', 'EE', 'BB']: 1041
+['AA', 'DD', 'HH', 'EE', 'CC', 'BB', 'JJ']: 1290
+['AA', 'DD', 'HH', 'EE', 'CC', 'BB']: 1082
+['AA', 'DD', 'HH', 'EE', 'CC', 'JJ', 'BB']: 1349
+['AA', 'DD', 'HH', 'EE', 'CC', 'JJ']: 1076
+['AA', 'DD', 'HH', 'EE', 'CC']: 1044
+['AA', 'DD', 'HH', 'EE', 'JJ', 'BB', 'CC']: 1535
+['AA', 'DD', 'HH', 'EE', 'JJ', 'BB']: 1353
+['AA', 'DD', 'HH', 'EE', 'JJ', 'CC', 'BB']: 1358
+['AA', 'DD', 'HH', 'EE', 'JJ', 'CC']: 1332
+['AA', 'DD', 'HH', 'EE', 'JJ']: 1038
+['AA', 'DD', 'HH', 'JJ', 'BB', 'CC', 'EE']: 1417
+['AA', 'DD', 'HH', 'JJ', 'BB', 'CC']: 1393
+['AA', 'DD', 'HH', 'JJ', 'BB', 'EE', 'CC']: 1397
+['AA', 'DD', 'HH', 'JJ', 'BB', 'EE']: 1367
+['AA', 'DD', 'HH', 'JJ', 'BB']: 1211
+['AA', 'DD', 'HH', 'JJ', 'CC', 'BB', 'EE']: 1346
+['AA', 'DD', 'HH', 'JJ', 'CC', 'BB']: 1216
+['AA', 'DD', 'HH', 'JJ', 'CC', 'EE', 'BB']: 1241
+['AA', 'DD', 'HH', 'JJ', 'CC', 'EE']: 1214
+['AA', 'DD', 'HH', 'JJ', 'CC']: 1190
+['AA', 'DD', 'HH', 'JJ', 'EE', 'BB', 'CC']: 1353
+['AA', 'DD', 'HH', 'JJ', 'EE', 'BB']: 1223
+['AA', 'DD', 'HH', 'JJ', 'EE', 'CC', 'BB']: 1248
+['AA', 'DD', 'HH', 'JJ', 'EE', 'CC']: 1226
+['AA', 'DD', 'HH', 'JJ', 'EE']: 1190
+['AA', 'DD', 'JJ', 'BB', 'CC', 'EE', 'HH']: 1380
+['AA', 'DD', 'JJ', 'BB', 'CC', 'EE']: 1329
+['AA', 'DD', 'JJ', 'BB', 'CC', 'HH', 'EE']: 1631
+['AA', 'DD', 'JJ', 'BB', 'CC', 'HH']: 1323
+['AA', 'DD', 'JJ', 'BB', 'CC']: 1289
+['AA', 'DD', 'JJ', 'BB', 'EE', 'CC', 'HH']: 1343
+['AA', 'DD', 'JJ', 'BB', 'EE', 'CC']: 1317
+['AA', 'DD', 'JJ', 'BB', 'EE', 'HH', 'CC']: 1578
+['AA', 'DD', 'JJ', 'BB', 'EE', 'HH']: 1314
+['AA', 'DD', 'JJ', 'BB', 'EE']: 1263
+['AA', 'DD', 'JJ', 'BB', 'HH', 'CC', 'EE']: 1508
+['AA', 'DD', 'JJ', 'BB', 'HH', 'CC']: 1488
+['AA', 'DD', 'JJ', 'BB', 'HH', 'EE', 'CC']: 1568
+['AA', 'DD', 'JJ', 'BB', 'HH', 'EE']: 1532
+['AA', 'DD', 'JJ', 'BB', 'HH']: 1224
+['AA', 'DD', 'JJ', 'BB']: 1003
+['AA', 'DD', 'JJ', 'CC', 'BB', 'EE', 'HH']: 1303
+['AA', 'DD', 'JJ', 'CC', 'BB', 'EE']: 1258
+['AA', 'DD', 'JJ', 'CC', 'BB', 'HH', 'EE']: 1483
+['AA', 'DD', 'JJ', 'CC', 'BB', 'HH']: 1219
+['AA', 'DD', 'JJ', 'CC', 'BB']: 1024
+['AA', 'DD', 'JJ', 'CC', 'EE', 'BB', 'HH']: 1216
+['AA', 'DD', 'JJ', 'CC', 'EE', 'BB']: 1073
+['AA', 'DD', 'JJ', 'CC', 'EE', 'HH', 'BB']: 1315
+['AA', 'DD', 'JJ', 'CC', 'EE', 'HH']: 1073
+['AA', 'DD', 'JJ', 'CC', 'EE']: 1022
+['AA', 'DD', 'JJ', 'CC', 'HH', 'BB', 'EE']: 1362
+['AA', 'DD', 'JJ', 'CC', 'HH', 'BB']: 1258
+['AA', 'DD', 'JJ', 'CC', 'HH', 'EE', 'BB']: 1357
+['AA', 'DD', 'JJ', 'CC', 'HH', 'EE']: 1324
+['AA', 'DD', 'JJ', 'CC', 'HH']: 1016
+['AA', 'DD', 'JJ', 'EE', 'BB', 'CC', 'HH']: 1299
+['AA', 'DD', 'JJ', 'EE', 'BB', 'CC']: 1273
+['AA', 'DD', 'JJ', 'EE', 'BB', 'HH', 'CC']: 1384
+['AA', 'DD', 'JJ', 'EE', 'BB', 'HH']: 1208
+['AA', 'DD', 'JJ', 'EE', 'BB']: 1039
+['AA', 'DD', 'JJ', 'EE', 'CC', 'BB', 'HH']: 1249
+['AA', 'DD', 'JJ', 'EE', 'CC', 'BB']: 1080
+['AA', 'DD', 'JJ', 'EE', 'CC', 'HH', 'BB']: 1270
+['AA', 'DD', 'JJ', 'EE', 'CC', 'HH']: 1072
+['AA', 'DD', 'JJ', 'EE', 'CC']: 1042
+['AA', 'DD', 'JJ', 'EE', 'HH', 'BB', 'CC']: 1481
+['AA', 'DD', 'JJ', 'EE', 'HH', 'BB']: 1325
+['AA', 'DD', 'JJ', 'EE', 'HH', 'CC', 'BB']: 1373
+['AA', 'DD', 'JJ', 'EE', 'HH', 'CC']: 1347
+['AA', 'DD', 'JJ', 'EE', 'HH']: 1039
+['AA', 'DD', 'JJ', 'HH', 'BB', 'CC', 'EE']: 1381
+['AA', 'DD', 'JJ', 'HH', 'BB', 'CC']: 1361
+['AA', 'DD', 'JJ', 'HH', 'BB', 'EE', 'CC']: 1359
+['AA', 'DD', 'JJ', 'HH', 'BB', 'EE']: 1335
+['AA', 'DD', 'JJ', 'HH', 'BB']: 1205
+['AA', 'DD', 'JJ', 'HH', 'CC', 'BB', 'EE']: 1383
+['AA', 'DD', 'JJ', 'HH', 'CC', 'BB']: 1253
+['AA', 'DD', 'JJ', 'HH', 'CC', 'EE', 'BB']: 1278
+['AA', 'DD', 'JJ', 'HH', 'CC', 'EE']: 1251
+['AA', 'DD', 'JJ', 'HH', 'CC']: 1227
+['AA', 'DD', 'JJ', 'HH', 'EE', 'BB', 'CC']: 1466
+['AA', 'DD', 'JJ', 'HH', 'EE', 'BB']: 1310
+['AA', 'DD', 'JJ', 'HH', 'EE', 'CC', 'BB']: 1339
+['AA', 'DD', 'JJ', 'HH', 'EE', 'CC']: 1313
+['AA', 'DD', 'JJ', 'HH', 'EE']: 1271
+['AA', 'EE', 'BB', 'CC', 'DD', 'HH', 'JJ']: 1077
+['AA', 'EE', 'BB', 'CC', 'DD', 'JJ', 'HH']: 1106
+['AA', 'EE', 'BB', 'CC', 'JJ', 'DD', 'HH']: 1044
+['AA', 'EE', 'BB', 'DD', 'CC', 'HH', 'JJ']: 1068
+['AA', 'EE', 'BB', 'DD', 'CC', 'JJ', 'HH']: 1081
+['AA', 'EE', 'BB', 'DD', 'HH', 'CC', 'JJ']: 1082
+['AA', 'EE', 'BB', 'DD', 'HH', 'CC']: 1062
+['AA', 'EE', 'BB', 'DD', 'HH', 'JJ', 'CC']: 1186
+['AA', 'EE', 'BB', 'DD', 'HH', 'JJ']: 1018
+['AA', 'EE', 'BB', 'DD', 'JJ', 'CC', 'HH']: 1132
+['AA', 'EE', 'BB', 'DD', 'JJ', 'CC']: 1110
+['AA', 'EE', 'BB', 'DD', 'JJ', 'HH', 'CC']: 1223
+['AA', 'EE', 'BB', 'DD', 'JJ', 'HH']: 1047
+['AA', 'EE', 'BB', 'HH', 'DD', 'JJ', 'CC']: 1060
+['AA', 'EE', 'BB', 'JJ', 'CC', 'DD', 'HH']: 1033
+['AA', 'EE', 'BB', 'JJ', 'DD', 'CC', 'HH']: 1146
+['AA', 'EE', 'BB', 'JJ', 'DD', 'CC']: 1120
+['AA', 'EE', 'BB', 'JJ', 'DD', 'HH', 'CC']: 1280
+['AA', 'EE', 'BB', 'JJ', 'DD', 'HH']: 1060
+['AA', 'EE', 'BB', 'JJ', 'HH', 'DD', 'CC']: 1118
+['AA', 'EE', 'CC', 'BB', 'DD', 'HH', 'JJ']: 1071
+['AA', 'EE', 'CC', 'BB', 'DD', 'JJ', 'HH']: 1100
+['AA', 'EE', 'CC', 'BB', 'JJ', 'DD', 'HH']: 1113
+['AA', 'EE', 'CC', 'DD', 'BB', 'HH', 'JJ']: 1029
+['AA', 'EE', 'CC', 'DD', 'BB', 'JJ', 'HH']: 1121
+['AA', 'EE', 'CC', 'DD', 'HH', 'BB', 'JJ']: 1034
+['AA', 'EE', 'CC', 'DD', 'HH', 'JJ', 'BB']: 1087
+['AA', 'EE', 'CC', 'DD', 'JJ', 'BB', 'HH']: 1136
+['AA', 'EE', 'CC', 'DD', 'JJ', 'HH', 'BB']: 1081
+['AA', 'EE', 'CC', 'HH', 'DD', 'JJ', 'BB']: 1005
+['AA', 'EE', 'CC', 'JJ', 'BB', 'DD', 'HH']: 1002
+['AA', 'EE', 'CC', 'JJ', 'DD', 'BB', 'HH']: 1004
+['AA', 'EE', 'CC', 'JJ', 'DD', 'HH', 'BB']: 1019
+['AA', 'EE', 'DD', 'BB', 'CC', 'HH', 'JJ']: 1195
+['AA', 'EE', 'DD', 'BB', 'CC', 'JJ', 'HH']: 1206
+['AA', 'EE', 'DD', 'BB', 'HH', 'CC', 'JJ']: 1156
+['AA', 'EE', 'DD', 'BB', 'HH', 'CC']: 1136
+['AA', 'EE', 'DD', 'BB', 'HH', 'JJ', 'CC']: 1260
+['AA', 'EE', 'DD', 'BB', 'HH', 'JJ']: 1092
+['AA', 'EE', 'DD', 'BB', 'JJ', 'CC', 'HH']: 1271
+['AA', 'EE', 'DD', 'BB', 'JJ', 'CC']: 1245
+['AA', 'EE', 'DD', 'BB', 'JJ', 'HH', 'CC']: 1402
+['AA', 'EE', 'DD', 'BB', 'JJ', 'HH']: 1182
+['AA', 'EE', 'DD', 'CC', 'BB', 'HH', 'JJ']: 1162
+['AA', 'EE', 'DD', 'CC', 'BB', 'JJ', 'HH']: 1252
+['AA', 'EE', 'DD', 'CC', 'HH', 'BB', 'JJ']: 1129
+['AA', 'EE', 'DD', 'CC', 'HH', 'JJ', 'BB']: 1182
+['AA', 'EE', 'DD', 'CC', 'JJ', 'BB', 'HH']: 1213
+['AA', 'EE', 'DD', 'CC', 'JJ', 'BB']: 1044
+['AA', 'EE', 'DD', 'CC', 'JJ', 'HH', 'BB']: 1158
+['AA', 'EE', 'DD', 'HH', 'BB', 'CC', 'JJ']: 1147
+['AA', 'EE', 'DD', 'HH', 'BB', 'CC']: 1123
+['AA', 'EE', 'DD', 'HH', 'BB', 'JJ', 'CC']: 1307
+['AA', 'EE', 'DD', 'HH', 'BB', 'JJ']: 1097
+['AA', 'EE', 'DD', 'HH', 'CC', 'BB', 'JJ']: 1153
+['AA', 'EE', 'DD', 'HH', 'CC', 'JJ', 'BB']: 1196
+['AA', 'EE', 'DD', 'HH', 'JJ', 'BB', 'CC']: 1322
+['AA', 'EE', 'DD', 'HH', 'JJ', 'BB']: 1166
+['AA', 'EE', 'DD', 'HH', 'JJ', 'CC', 'BB']: 1167
+['AA', 'EE', 'DD', 'HH', 'JJ', 'CC']: 1145
+['AA', 'EE', 'DD', 'JJ', 'BB', 'CC', 'HH']: 1292
+['AA', 'EE', 'DD', 'JJ', 'BB', 'CC']: 1262
+['AA', 'EE', 'DD', 'JJ', 'BB', 'HH', 'CC']: 1417
+['AA', 'EE', 'DD', 'JJ', 'BB', 'HH']: 1197
+['AA', 'EE', 'DD', 'JJ', 'BB']: 1002
+['AA', 'EE', 'DD', 'JJ', 'CC', 'BB', 'HH']: 1188
+['AA', 'EE', 'DD', 'JJ', 'CC', 'BB']: 1019
+['AA', 'EE', 'DD', 'JJ', 'CC', 'HH', 'BB']: 1209
+['AA', 'EE', 'DD', 'JJ', 'CC', 'HH']: 1011
+['AA', 'EE', 'DD', 'JJ', 'HH', 'BB', 'CC']: 1290
+['AA', 'EE', 'DD', 'JJ', 'HH', 'BB']: 1160
+['AA', 'EE', 'DD', 'JJ', 'HH', 'CC', 'BB']: 1204
+['AA', 'EE', 'DD', 'JJ', 'HH', 'CC']: 1182
+['AA', 'EE', 'HH', 'BB', 'CC', 'DD', 'JJ']: 1041
+['AA', 'EE', 'HH', 'BB', 'DD', 'CC', 'JJ']: 1058
+['AA', 'EE', 'HH', 'BB', 'DD', 'CC']: 1034
+['AA', 'EE', 'HH', 'BB', 'DD', 'JJ', 'CC']: 1204
+['AA', 'EE', 'HH', 'BB', 'JJ', 'DD', 'CC']: 1214
+['AA', 'EE', 'HH', 'CC', 'BB', 'DD', 'JJ']: 1054
+['AA', 'EE', 'HH', 'CC', 'BB', 'JJ', 'DD']: 1034
+['AA', 'EE', 'HH', 'CC', 'DD', 'BB', 'JJ']: 1075
+['AA', 'EE', 'HH', 'CC', 'DD', 'JJ', 'BB']: 1146
+['AA', 'EE', 'HH', 'CC', 'JJ', 'DD', 'BB']: 1040
+['AA', 'EE', 'HH', 'DD', 'BB', 'CC', 'JJ']: 1179
+['AA', 'EE', 'HH', 'DD', 'BB', 'CC']: 1151
+['AA', 'EE', 'HH', 'DD', 'BB', 'JJ', 'CC']: 1377
+['AA', 'EE', 'HH', 'DD', 'BB', 'JJ']: 1125
+['AA', 'EE', 'HH', 'DD', 'CC', 'BB', 'JJ']: 1183
+['AA', 'EE', 'HH', 'DD', 'CC', 'JJ', 'BB']: 1242
+['AA', 'EE', 'HH', 'DD', 'JJ', 'BB', 'CC']: 1394
+['AA', 'EE', 'HH', 'DD', 'JJ', 'BB']: 1212
+['AA', 'EE', 'HH', 'DD', 'JJ', 'CC', 'BB']: 1217
+['AA', 'EE', 'HH', 'DD', 'JJ', 'CC']: 1191
+['AA', 'EE', 'HH', 'JJ', 'BB', 'DD', 'CC']: 1195
+['AA', 'EE', 'HH', 'JJ', 'CC', 'DD', 'BB']: 1011
+['AA', 'EE', 'HH', 'JJ', 'DD', 'BB', 'CC']: 1202
+['AA', 'EE', 'HH', 'JJ', 'DD', 'BB']: 1046
+['AA', 'EE', 'HH', 'JJ', 'DD', 'CC', 'BB']: 1092
+['AA', 'EE', 'HH', 'JJ', 'DD', 'CC']: 1066
+['AA', 'EE', 'JJ', 'BB', 'CC', 'DD', 'HH']: 1111
+['AA', 'EE', 'JJ', 'BB', 'CC', 'HH', 'DD']: 1045
+['AA', 'EE', 'JJ', 'BB', 'DD', 'CC', 'HH']: 1146
+['AA', 'EE', 'JJ', 'BB', 'DD', 'CC']: 1120
+['AA', 'EE', 'JJ', 'BB', 'DD', 'HH', 'CC']: 1280
+['AA', 'EE', 'JJ', 'BB', 'DD', 'HH']: 1060
+['AA', 'EE', 'JJ', 'BB', 'HH', 'DD', 'CC']: 1150
+['AA', 'EE', 'JJ', 'CC', 'BB', 'DD', 'HH']: 1011
+['AA', 'EE', 'JJ', 'CC', 'DD', 'BB', 'HH']: 1013
+['AA', 'EE', 'JJ', 'CC', 'DD', 'HH', 'BB']: 1028
+['AA', 'EE', 'JJ', 'DD', 'BB', 'CC', 'HH']: 1153
+['AA', 'EE', 'JJ', 'DD', 'BB', 'CC']: 1127
+['AA', 'EE', 'JJ', 'DD', 'BB', 'HH', 'CC']: 1238
+['AA', 'EE', 'JJ', 'DD', 'BB', 'HH']: 1062
+['AA', 'EE', 'JJ', 'DD', 'CC', 'BB', 'HH']: 1120
+['AA', 'EE', 'JJ', 'DD', 'CC', 'HH', 'BB']: 1141
+['AA', 'EE', 'JJ', 'DD', 'HH', 'BB', 'CC']: 1225
+['AA', 'EE', 'JJ', 'DD', 'HH', 'BB']: 1095
+['AA', 'EE', 'JJ', 'DD', 'HH', 'CC', 'BB']: 1139
+['AA', 'EE', 'JJ', 'DD', 'HH', 'CC']: 1117
+['AA', 'EE', 'JJ', 'HH', 'DD', 'BB', 'CC']: 1065
+['AA', 'HH', 'BB', 'CC', 'DD', 'EE', 'JJ']: 1042
+['AA', 'HH', 'BB', 'CC', 'DD', 'EE']: 1006
+['AA', 'HH', 'BB', 'CC', 'DD', 'JJ', 'EE']: 1176
+['AA', 'HH', 'BB', 'CC', 'JJ', 'DD', 'EE']: 1111
+['AA', 'HH', 'BB', 'DD', 'CC', 'EE', 'JJ']: 1017
+['AA', 'HH', 'BB', 'DD', 'CC', 'JJ', 'EE']: 1151
+['AA', 'HH', 'BB', 'DD', 'EE', 'CC', 'JJ']: 1021
+['AA', 'HH', 'BB', 'DD', 'EE', 'CC']: 1001
+['AA', 'HH', 'BB', 'DD', 'EE', 'JJ', 'CC']: 1163
+['AA', 'HH', 'BB', 'DD', 'JJ', 'CC', 'EE']: 1145
+['AA', 'HH', 'BB', 'DD', 'JJ', 'CC']: 1129
+['AA', 'HH', 'BB', 'DD', 'JJ', 'EE', 'CC']: 1153
+['AA', 'HH', 'BB', 'DD', 'JJ', 'EE']: 1129
+['AA', 'HH', 'BB', 'EE', 'DD', 'JJ', 'CC']: 1079
+['AA', 'HH', 'BB', 'EE', 'JJ', 'DD', 'CC']: 1011
+['AA', 'HH', 'BB', 'JJ', 'CC', 'DD', 'EE']: 1100
+['AA', 'HH', 'BB', 'JJ', 'DD', 'CC', 'EE']: 1159
+['AA', 'HH', 'BB', 'JJ', 'DD', 'CC']: 1139
+['AA', 'HH', 'BB', 'JJ', 'DD', 'EE', 'CC']: 1169
+['AA', 'HH', 'BB', 'JJ', 'DD', 'EE']: 1139
+['AA', 'HH', 'BB', 'JJ', 'EE', 'DD', 'CC']: 1111
+['AA', 'HH', 'CC', 'BB', 'DD', 'EE', 'JJ']: 1055
+['AA', 'HH', 'CC', 'BB', 'DD', 'EE']: 1019
+['AA', 'HH', 'CC', 'BB', 'DD', 'JJ', 'EE']: 1189
+['AA', 'HH', 'CC', 'BB', 'JJ', 'DD', 'EE']: 1199
+['AA', 'HH', 'CC', 'DD', 'BB', 'EE', 'JJ']: 1030
+['AA', 'HH', 'CC', 'DD', 'BB', 'JJ', 'EE']: 1210
+['AA', 'HH', 'CC', 'DD', 'EE', 'BB', 'JJ']: 1039
+['AA', 'HH', 'CC', 'DD', 'EE', 'JJ', 'BB']: 1111
+['AA', 'HH', 'CC', 'DD', 'JJ', 'BB', 'EE']: 1201
+['AA', 'HH', 'CC', 'DD', 'JJ', 'BB']: 1071
+['AA', 'HH', 'CC', 'DD', 'JJ', 'EE', 'BB']: 1077
+['AA', 'HH', 'CC', 'DD', 'JJ', 'EE']: 1050
+['AA', 'HH', 'CC', 'EE', 'DD', 'JJ', 'BB']: 1038
+['AA', 'HH', 'CC', 'JJ', 'BB', 'DD', 'EE']: 1088
+['AA', 'HH', 'CC', 'JJ', 'DD', 'BB', 'EE']: 1069
+['AA', 'HH', 'CC', 'JJ', 'DD', 'EE', 'BB']: 1012
+['AA', 'HH', 'DD', 'BB', 'CC', 'EE', 'JJ']: 1144
+['AA', 'HH', 'DD', 'BB', 'CC', 'EE']: 1108
+['AA', 'HH', 'DD', 'BB', 'CC', 'JJ', 'EE']: 1314
+['AA', 'HH', 'DD', 'BB', 'CC', 'JJ']: 1104
+['AA', 'HH', 'DD', 'BB', 'CC']: 1076
+['AA', 'HH', 'DD', 'BB', 'EE', 'CC', 'JJ']: 1112
+['AA', 'HH', 'DD', 'BB', 'EE', 'CC']: 1092
+['AA', 'HH', 'DD', 'BB', 'EE', 'JJ', 'CC']: 1254
+['AA', 'HH', 'DD', 'BB', 'EE', 'JJ']: 1086
+['AA', 'HH', 'DD', 'BB', 'EE']: 1050
+['AA', 'HH', 'DD', 'BB', 'JJ', 'CC', 'EE']: 1322
+['AA', 'HH', 'DD', 'BB', 'JJ', 'CC']: 1302
+['AA', 'HH', 'DD', 'BB', 'JJ', 'EE', 'CC']: 1332
+['AA', 'HH', 'DD', 'BB', 'JJ', 'EE']: 1302
+['AA', 'HH', 'DD', 'BB', 'JJ']: 1050
+['AA', 'HH', 'DD', 'CC', 'BB', 'EE', 'JJ']: 1144
+['AA', 'HH', 'DD', 'CC', 'BB', 'EE']: 1108
+['AA', 'HH', 'DD', 'CC', 'BB', 'JJ', 'EE']: 1360
+['AA', 'HH', 'DD', 'CC', 'BB', 'JJ']: 1108
+['AA', 'HH', 'DD', 'CC', 'EE', 'BB', 'JJ']: 1099
+['AA', 'HH', 'DD', 'CC', 'EE', 'JJ', 'BB']: 1171
+['AA', 'HH', 'DD', 'CC', 'JJ', 'BB', 'EE']: 1297
+['AA', 'HH', 'DD', 'CC', 'JJ', 'BB']: 1167
+['AA', 'HH', 'DD', 'CC', 'JJ', 'EE', 'BB']: 1173
+['AA', 'HH', 'DD', 'CC', 'JJ', 'EE']: 1146
+['AA', 'HH', 'DD', 'EE', 'BB', 'CC', 'JJ']: 1145
+['AA', 'HH', 'DD', 'EE', 'BB', 'CC']: 1121
+['AA', 'HH', 'DD', 'EE', 'BB', 'JJ', 'CC']: 1305
+['AA', 'HH', 'DD', 'EE', 'BB', 'JJ']: 1095
+['AA', 'HH', 'DD', 'EE', 'CC', 'BB', 'JJ']: 1132
+['AA', 'HH', 'DD', 'EE', 'CC', 'JJ', 'BB']: 1175
+['AA', 'HH', 'DD', 'EE', 'JJ', 'BB', 'CC']: 1339
+['AA', 'HH', 'DD', 'EE', 'JJ', 'BB']: 1183
+['AA', 'HH', 'DD', 'EE', 'JJ', 'CC', 'BB']: 1184
+['AA', 'HH', 'DD', 'EE', 'JJ', 'CC']: 1162
+['AA', 'HH', 'DD', 'JJ', 'BB', 'CC', 'EE']: 1343
+['AA', 'HH', 'DD', 'JJ', 'BB', 'CC']: 1319
+['AA', 'HH', 'DD', 'JJ', 'BB', 'EE', 'CC']: 1323
+['AA', 'HH', 'DD', 'JJ', 'BB', 'EE']: 1293
+['AA', 'HH', 'DD', 'JJ', 'BB']: 1137
+['AA', 'HH', 'DD', 'JJ', 'CC', 'BB', 'EE']: 1272
+['AA', 'HH', 'DD', 'JJ', 'CC', 'BB']: 1142
+['AA', 'HH', 'DD', 'JJ', 'CC', 'EE', 'BB']: 1167
+['AA', 'HH', 'DD', 'JJ', 'CC', 'EE']: 1140
+['AA', 'HH', 'DD', 'JJ', 'CC']: 1116
+['AA', 'HH', 'DD', 'JJ', 'EE', 'BB', 'CC']: 1279
+['AA', 'HH', 'DD', 'JJ', 'EE', 'BB']: 1149
+['AA', 'HH', 'DD', 'JJ', 'EE', 'CC', 'BB']: 1174
+['AA', 'HH', 'DD', 'JJ', 'EE', 'CC']: 1152
+['AA', 'HH', 'DD', 'JJ', 'EE']: 1116
+['AA', 'HH', 'EE', 'BB', 'CC', 'DD', 'JJ']: 1089
+['AA', 'HH', 'EE', 'BB', 'CC', 'JJ', 'DD']: 1034
+['AA', 'HH', 'EE', 'BB', 'DD', 'CC', 'JJ']: 1106
+['AA', 'HH', 'EE', 'BB', 'DD', 'CC']: 1082
+['AA', 'HH', 'EE', 'BB', 'DD', 'JJ', 'CC']: 1252
+['AA', 'HH', 'EE', 'BB', 'DD', 'JJ']: 1042
+['AA', 'HH', 'EE', 'BB', 'JJ', 'CC', 'DD']: 1023
+['AA', 'HH', 'EE', 'BB', 'JJ', 'CC']: 1001
+['AA', 'HH', 'EE', 'BB', 'JJ', 'DD', 'CC']: 1262
+['AA', 'HH', 'EE', 'BB', 'JJ', 'DD']: 1022
+['AA', 'HH', 'EE', 'CC', 'BB', 'DD', 'JJ']: 1083
+['AA', 'HH', 'EE', 'CC', 'BB', 'JJ', 'DD']: 1063
+['AA', 'HH', 'EE', 'CC', 'DD', 'BB', 'JJ']: 1104
+['AA', 'HH', 'EE', 'CC', 'DD', 'JJ', 'BB']: 1175
+['AA', 'HH', 'EE', 'CC', 'JJ', 'DD', 'BB']: 1069
+['AA', 'HH', 'EE', 'DD', 'BB', 'CC', 'JJ']: 1189
+['AA', 'HH', 'EE', 'DD', 'BB', 'CC']: 1161
+['AA', 'HH', 'EE', 'DD', 'BB', 'JJ', 'CC']: 1387
+['AA', 'HH', 'EE', 'DD', 'BB', 'JJ']: 1135
+['AA', 'HH', 'EE', 'DD', 'CC', 'BB', 'JJ']: 1193
+['AA', 'HH', 'EE', 'DD', 'CC', 'JJ', 'BB']: 1252
+['AA', 'HH', 'EE', 'DD', 'JJ', 'BB', 'CC']: 1404
+['AA', 'HH', 'EE', 'DD', 'JJ', 'BB']: 1222
+['AA', 'HH', 'EE', 'DD', 'JJ', 'CC', 'BB']: 1227
+['AA', 'HH', 'EE', 'DD', 'JJ', 'CC']: 1201
+['AA', 'HH', 'EE', 'JJ', 'BB', 'CC', 'DD']: 1061
+['AA', 'HH', 'EE', 'JJ', 'BB', 'CC']: 1035
+['AA', 'HH', 'EE', 'JJ', 'BB', 'DD', 'CC']: 1262
+['AA', 'HH', 'EE', 'JJ', 'BB', 'DD']: 1022
+['AA', 'HH', 'EE', 'JJ', 'CC', 'BB', 'DD']: 1001
+['AA', 'HH', 'EE', 'JJ', 'CC', 'DD', 'BB']: 1078
+['AA', 'HH', 'EE', 'JJ', 'DD', 'BB', 'CC']: 1269
+['AA', 'HH', 'EE', 'JJ', 'DD', 'BB']: 1113
+['AA', 'HH', 'EE', 'JJ', 'DD', 'CC', 'BB']: 1159
+['AA', 'HH', 'EE', 'JJ', 'DD', 'CC']: 1133
+['AA', 'HH', 'JJ', 'BB', 'CC', 'DD', 'EE']: 1159
+['AA', 'HH', 'JJ', 'BB', 'DD', 'CC', 'EE']: 1140
+['AA', 'HH', 'JJ', 'BB', 'DD', 'CC']: 1120
+['AA', 'HH', 'JJ', 'BB', 'DD', 'EE', 'CC']: 1150
+['AA', 'HH', 'JJ', 'BB', 'DD', 'EE']: 1120
+['AA', 'HH', 'JJ', 'BB', 'EE', 'DD', 'CC']: 1100
+['AA', 'HH', 'JJ', 'CC', 'BB', 'DD', 'EE']: 1059
+['AA', 'HH', 'JJ', 'CC', 'DD', 'BB', 'EE']: 1040
+['AA', 'HH', 'JJ', 'DD', 'BB', 'CC', 'EE']: 1147
+['AA', 'HH', 'JJ', 'DD', 'BB', 'CC']: 1127
+['AA', 'HH', 'JJ', 'DD', 'BB', 'EE', 'CC']: 1125
+['AA', 'HH', 'JJ', 'DD', 'BB', 'EE']: 1101
+['AA', 'HH', 'JJ', 'DD', 'CC', 'BB', 'EE']: 1147
+['AA', 'HH', 'JJ', 'DD', 'CC', 'BB']: 1017
+['AA', 'HH', 'JJ', 'DD', 'CC', 'EE', 'BB']: 1042
+['AA', 'HH', 'JJ', 'DD', 'CC', 'EE']: 1015
+['AA', 'HH', 'JJ', 'DD', 'EE', 'BB', 'CC']: 1154
+['AA', 'HH', 'JJ', 'DD', 'EE', 'BB']: 1024
+['AA', 'HH', 'JJ', 'DD', 'EE', 'CC', 'BB']: 1049
+['AA', 'HH', 'JJ', 'DD', 'EE', 'CC']: 1027
+['AA', 'HH', 'JJ', 'EE', 'DD', 'BB', 'CC']: 1079
+['AA', 'JJ', 'BB', 'CC', 'DD', 'EE', 'HH']: 1380
+['AA', 'JJ', 'BB', 'CC', 'DD', 'EE']: 1323
+['AA', 'JJ', 'BB', 'CC', 'DD', 'HH', 'EE']: 1615
+['AA', 'JJ', 'BB', 'CC', 'DD', 'HH']: 1263
+['AA', 'JJ', 'BB', 'CC', 'EE', 'DD', 'HH']: 1284
+['AA', 'JJ', 'BB', 'CC', 'EE', 'HH', 'DD']: 1268
+['AA', 'JJ', 'BB', 'CC', 'HH', 'DD', 'EE']: 1485
+['AA', 'JJ', 'BB', 'CC', 'HH', 'DD']: 1205
+['AA', 'JJ', 'BB', 'CC', 'HH', 'EE', 'DD']: 1272
+['AA', 'JJ', 'BB', 'CC', 'HH', 'EE']: 1227
+['AA', 'JJ', 'BB', 'DD', 'CC', 'EE', 'HH']: 1355
+['AA', 'JJ', 'BB', 'DD', 'CC', 'EE']: 1304
+['AA', 'JJ', 'BB', 'DD', 'CC', 'HH', 'EE']: 1606
+['AA', 'JJ', 'BB', 'DD', 'CC', 'HH']: 1298
+['AA', 'JJ', 'BB', 'DD', 'CC']: 1264
+['AA', 'JJ', 'BB', 'DD', 'EE', 'CC', 'HH']: 1354
+['AA', 'JJ', 'BB', 'DD', 'EE', 'CC']: 1324
+['AA', 'JJ', 'BB', 'DD', 'EE', 'HH', 'CC']: 1629
+['AA', 'JJ', 'BB', 'DD', 'EE', 'HH']: 1321
+['AA', 'JJ', 'BB', 'DD', 'EE']: 1264
+['AA', 'JJ', 'BB', 'DD', 'HH', 'CC', 'EE']: 1536
+['AA', 'JJ', 'BB', 'DD', 'HH', 'CC']: 1512
+['AA', 'JJ', 'BB', 'DD', 'HH', 'EE', 'CC']: 1598
+['AA', 'JJ', 'BB', 'DD', 'HH', 'EE']: 1556
+['AA', 'JJ', 'BB', 'DD', 'HH']: 1204
+['AA', 'JJ', 'BB', 'EE', 'CC', 'DD', 'HH']: 1209
+['AA', 'JJ', 'BB', 'EE', 'CC', 'HH', 'DD']: 1143
+['AA', 'JJ', 'BB', 'EE', 'DD', 'CC', 'HH']: 1304
+['AA', 'JJ', 'BB', 'EE', 'DD', 'CC']: 1274
+['AA', 'JJ', 'BB', 'EE', 'DD', 'HH', 'CC']: 1478
+['AA', 'JJ', 'BB', 'EE', 'DD', 'HH']: 1214
+['AA', 'JJ', 'BB', 'EE', 'HH', 'CC', 'DD']: 1202
+['AA', 'JJ', 'BB', 'EE', 'HH', 'CC']: 1176
+['AA', 'JJ', 'BB', 'EE', 'HH', 'DD', 'CC']: 1478
+['AA', 'JJ', 'BB', 'EE', 'HH', 'DD']: 1198
+['AA', 'JJ', 'BB', 'HH', 'CC', 'DD', 'EE']: 1346
+['AA', 'JJ', 'BB', 'HH', 'CC', 'DD']: 1106
+['AA', 'JJ', 'BB', 'HH', 'CC', 'EE', 'DD']: 1137
+['AA', 'JJ', 'BB', 'HH', 'CC', 'EE']: 1104
+['AA', 'JJ', 'BB', 'HH', 'CC']: 1080
+['AA', 'JJ', 'BB', 'HH', 'DD', 'CC', 'EE']: 1406
+['AA', 'JJ', 'BB', 'HH', 'DD', 'CC']: 1382
+['AA', 'JJ', 'BB', 'HH', 'DD', 'EE', 'CC']: 1418
+['AA', 'JJ', 'BB', 'HH', 'DD', 'EE']: 1382
+['AA', 'JJ', 'BB', 'HH', 'DD']: 1102
+['AA', 'JJ', 'BB', 'HH', 'EE', 'CC', 'DD']: 1192
+['AA', 'JJ', 'BB', 'HH', 'EE', 'CC']: 1166
+['AA', 'JJ', 'BB', 'HH', 'EE', 'DD', 'CC']: 1449
+['AA', 'JJ', 'BB', 'HH', 'EE', 'DD']: 1169
+['AA', 'JJ', 'BB', 'HH', 'EE']: 1124
+['AA', 'JJ', 'CC', 'BB', 'DD', 'EE', 'HH']: 1274
+['AA', 'JJ', 'CC', 'BB', 'DD', 'EE']: 1223
+['AA', 'JJ', 'CC', 'BB', 'DD', 'HH', 'EE']: 1471
+['AA', 'JJ', 'CC', 'BB', 'DD', 'HH']: 1163
+['AA', 'JJ', 'CC', 'BB', 'EE', 'DD', 'HH']: 1167
+['AA', 'JJ', 'CC', 'BB', 'EE', 'HH', 'DD']: 1147
+['AA', 'JJ', 'CC', 'BB', 'HH', 'DD', 'EE']: 1297
+['AA', 'JJ', 'CC', 'BB', 'HH', 'DD']: 1057
+['AA', 'JJ', 'CC', 'BB', 'HH', 'EE', 'DD']: 1118
+['AA', 'JJ', 'CC', 'BB', 'HH', 'EE']: 1079
+['AA', 'JJ', 'CC', 'DD', 'BB', 'EE', 'HH']: 1249
+['AA', 'JJ', 'CC', 'DD', 'BB', 'EE']: 1204
+['AA', 'JJ', 'CC', 'DD', 'BB', 'HH', 'EE']: 1429
+['AA', 'JJ', 'CC', 'DD', 'BB', 'HH']: 1165
+['AA', 'JJ', 'CC', 'DD', 'EE', 'BB', 'HH']: 1216
+['AA', 'JJ', 'CC', 'DD', 'EE', 'BB']: 1047
+['AA', 'JJ', 'CC', 'DD', 'EE', 'HH', 'BB']: 1333
+['AA', 'JJ', 'CC', 'DD', 'EE', 'HH']: 1047
+['AA', 'JJ', 'CC', 'DD', 'HH', 'BB', 'EE']: 1346
+['AA', 'JJ', 'CC', 'DD', 'HH', 'BB']: 1216
+['AA', 'JJ', 'CC', 'DD', 'HH', 'EE', 'BB']: 1321
+['AA', 'JJ', 'CC', 'DD', 'HH', 'EE']: 1282
+['AA', 'JJ', 'CC', 'EE', 'BB', 'DD', 'HH']: 1086
+['AA', 'JJ', 'CC', 'EE', 'DD', 'BB', 'HH']: 1160
+['AA', 'JJ', 'CC', 'EE', 'DD', 'HH', 'BB']: 1193
+['AA', 'JJ', 'CC', 'EE', 'HH', 'BB', 'DD']: 1034
+['AA', 'JJ', 'CC', 'EE', 'HH', 'DD', 'BB']: 1195
+['AA', 'JJ', 'CC', 'HH', 'BB', 'DD', 'EE']: 1171
+['AA', 'JJ', 'CC', 'HH', 'DD', 'BB', 'EE']: 1262
+['AA', 'JJ', 'CC', 'HH', 'DD', 'BB']: 1132
+['AA', 'JJ', 'CC', 'HH', 'DD', 'EE', 'BB']: 1185
+['AA', 'JJ', 'CC', 'HH', 'DD', 'EE']: 1152
+['AA', 'JJ', 'CC', 'HH', 'EE', 'BB', 'DD']: 1076
+['AA', 'JJ', 'CC', 'HH', 'EE', 'DD', 'BB']: 1199
+['AA', 'JJ', 'DD', 'BB', 'CC', 'EE', 'HH']: 1362
+['AA', 'JJ', 'DD', 'BB', 'CC', 'EE']: 1311
+['AA', 'JJ', 'DD', 'BB', 'CC', 'HH', 'EE']: 1613
+['AA', 'JJ', 'DD', 'BB', 'CC', 'HH']: 1305
+['AA', 'JJ', 'DD', 'BB', 'CC']: 1271
+['AA', 'JJ', 'DD', 'BB', 'EE', 'CC', 'HH']: 1325
+['AA', 'JJ', 'DD', 'BB', 'EE', 'CC']: 1299
+['AA', 'JJ', 'DD', 'BB', 'EE', 'HH', 'CC']: 1560
+['AA', 'JJ', 'DD', 'BB', 'EE', 'HH']: 1296
+['AA', 'JJ', 'DD', 'BB', 'EE']: 1245
+['AA', 'JJ', 'DD', 'BB', 'HH', 'CC', 'EE']: 1490
+['AA', 'JJ', 'DD', 'BB', 'HH', 'CC']: 1470
+['AA', 'JJ', 'DD', 'BB', 'HH', 'EE', 'CC']: 1550
+['AA', 'JJ', 'DD', 'BB', 'HH', 'EE']: 1514
+['AA', 'JJ', 'DD', 'BB', 'HH']: 1206
+['AA', 'JJ', 'DD', 'CC', 'BB', 'EE', 'HH']: 1362
+['AA', 'JJ', 'DD', 'CC', 'BB', 'EE']: 1311
+['AA', 'JJ', 'DD', 'CC', 'BB', 'HH', 'EE']: 1580
+['AA', 'JJ', 'DD', 'CC', 'BB', 'HH']: 1272
+['AA', 'JJ', 'DD', 'CC', 'BB']: 1051
+['AA', 'JJ', 'DD', 'CC', 'EE', 'BB', 'HH']: 1275
+['AA', 'JJ', 'DD', 'CC', 'EE', 'BB']: 1106
+['AA', 'JJ', 'DD', 'CC', 'EE', 'HH', 'BB']: 1392
+['AA', 'JJ', 'DD', 'CC', 'EE', 'HH']: 1106
+['AA', 'JJ', 'DD', 'CC', 'EE']: 1049
+['AA', 'JJ', 'DD', 'CC', 'HH', 'BB', 'EE']: 1459
+['AA', 'JJ', 'DD', 'CC', 'HH', 'BB']: 1329
+['AA', 'JJ', 'DD', 'CC', 'HH', 'EE', 'BB']: 1434
+['AA', 'JJ', 'DD', 'CC', 'HH', 'EE']: 1395
+['AA', 'JJ', 'DD', 'CC', 'HH']: 1043
+['AA', 'JJ', 'DD', 'CC']: 1005
+['AA', 'JJ', 'DD', 'EE', 'BB', 'CC', 'HH']: 1358
+['AA', 'JJ', 'DD', 'EE', 'BB', 'CC']: 1328
+['AA', 'JJ', 'DD', 'EE', 'BB', 'HH', 'CC']: 1483
+['AA', 'JJ', 'DD', 'EE', 'BB', 'HH']: 1263
+['AA', 'JJ', 'DD', 'EE', 'BB']: 1068
+['AA', 'JJ', 'DD', 'EE', 'CC', 'BB', 'HH']: 1308
+['AA', 'JJ', 'DD', 'EE', 'CC', 'BB']: 1113
+['AA', 'JJ', 'DD', 'EE', 'CC', 'HH', 'BB']: 1347
+['AA', 'JJ', 'DD', 'EE', 'CC', 'HH']: 1105
+['AA', 'JJ', 'DD', 'EE', 'CC']: 1071
+['AA', 'JJ', 'DD', 'EE', 'HH', 'BB', 'CC']: 1580
+['AA', 'JJ', 'DD', 'EE', 'HH', 'BB']: 1398
+['AA', 'JJ', 'DD', 'EE', 'HH', 'CC', 'BB']: 1450
+['AA', 'JJ', 'DD', 'EE', 'HH', 'CC']: 1420
+['AA', 'JJ', 'DD', 'EE', 'HH']: 1068
+['AA', 'JJ', 'DD', 'EE']: 1005
+['AA', 'JJ', 'DD', 'HH', 'BB', 'CC', 'EE']: 1481
+['AA', 'JJ', 'DD', 'HH', 'BB', 'CC']: 1457
+['AA', 'JJ', 'DD', 'HH', 'BB', 'EE', 'CC']: 1461
+['AA', 'JJ', 'DD', 'HH', 'BB', 'EE']: 1431
+['AA', 'JJ', 'DD', 'HH', 'BB']: 1275
+['AA', 'JJ', 'DD', 'HH', 'CC', 'BB', 'EE']: 1483
+['AA', 'JJ', 'DD', 'HH', 'CC', 'BB']: 1327
+['AA', 'JJ', 'DD', 'HH', 'CC', 'EE', 'BB']: 1358
+['AA', 'JJ', 'DD', 'HH', 'CC', 'EE']: 1325
+['AA', 'JJ', 'DD', 'HH', 'CC']: 1297
+['AA', 'JJ', 'DD', 'HH', 'EE', 'BB', 'CC']: 1568
+['AA', 'JJ', 'DD', 'HH', 'EE', 'BB']: 1386
+['AA', 'JJ', 'DD', 'HH', 'EE', 'CC', 'BB']: 1419
+['AA', 'JJ', 'DD', 'HH', 'EE', 'CC']: 1389
+['AA', 'JJ', 'DD', 'HH', 'EE']: 1341
+['AA', 'JJ', 'EE', 'BB', 'CC', 'DD', 'HH']: 1165
+['AA', 'JJ', 'EE', 'BB', 'CC', 'HH', 'DD']: 1099
+['AA', 'JJ', 'EE', 'BB', 'DD', 'CC', 'HH']: 1200
+['AA', 'JJ', 'EE', 'BB', 'DD', 'CC']: 1174
+['AA', 'JJ', 'EE', 'BB', 'DD', 'HH', 'CC']: 1334
+['AA', 'JJ', 'EE', 'BB', 'DD', 'HH']: 1114
+['AA', 'JJ', 'EE', 'BB', 'HH', 'DD', 'CC']: 1204
+['AA', 'JJ', 'EE', 'BB', 'HH', 'DD']: 1004
+['AA', 'JJ', 'EE', 'CC', 'BB', 'DD', 'HH']: 1159
+['AA', 'JJ', 'EE', 'CC', 'BB', 'HH', 'DD']: 1049
+['AA', 'JJ', 'EE', 'CC', 'DD', 'BB', 'HH']: 1161
+['AA', 'JJ', 'EE', 'CC', 'DD', 'HH', 'BB']: 1194
+['AA', 'JJ', 'EE', 'CC', 'HH', 'DD', 'BB']: 1110
+['AA', 'JJ', 'EE', 'DD', 'BB', 'CC', 'HH']: 1283
+['AA', 'JJ', 'EE', 'DD', 'BB', 'CC']: 1253
+['AA', 'JJ', 'EE', 'DD', 'BB', 'HH', 'CC']: 1408
+['AA', 'JJ', 'EE', 'DD', 'BB', 'HH']: 1188
+['AA', 'JJ', 'EE', 'DD', 'CC', 'BB', 'HH']: 1250
+['AA', 'JJ', 'EE', 'DD', 'CC', 'BB']: 1055
+['AA', 'JJ', 'EE', 'DD', 'CC', 'HH', 'BB']: 1289
+['AA', 'JJ', 'EE', 'DD', 'CC', 'HH']: 1047
+['AA', 'JJ', 'EE', 'DD', 'CC']: 1013
+['AA', 'JJ', 'EE', 'DD', 'HH', 'BB', 'CC']: 1395
+['AA', 'JJ', 'EE', 'DD', 'HH', 'BB']: 1239
+['AA', 'JJ', 'EE', 'DD', 'HH', 'CC', 'BB']: 1287
+['AA', 'JJ', 'EE', 'DD', 'HH', 'CC']: 1261
+['AA', 'JJ', 'EE', 'HH', 'BB', 'CC', 'DD']: 1105
+['AA', 'JJ', 'EE', 'HH', 'BB', 'CC']: 1079
+['AA', 'JJ', 'EE', 'HH', 'BB', 'DD', 'CC']: 1306
+['AA', 'JJ', 'EE', 'HH', 'BB', 'DD']: 1066
+['AA', 'JJ', 'EE', 'HH', 'CC', 'BB', 'DD']: 1118
+['AA', 'JJ', 'EE', 'HH', 'CC', 'DD', 'BB']: 1209
+['AA', 'JJ', 'EE', 'HH', 'DD', 'BB', 'CC']: 1423
+['AA', 'JJ', 'EE', 'HH', 'DD', 'BB']: 1241
+['AA', 'JJ', 'EE', 'HH', 'DD', 'CC', 'BB']: 1291
+['AA', 'JJ', 'EE', 'HH', 'DD', 'CC']: 1261
+['AA', 'JJ', 'HH', 'BB', 'CC', 'DD', 'EE']: 1219
+['AA', 'JJ', 'HH', 'BB', 'CC', 'EE', 'DD']: 1010
+['AA', 'JJ', 'HH', 'BB', 'DD', 'CC', 'EE']: 1200
+['AA', 'JJ', 'HH', 'BB', 'DD', 'CC']: 1180
+['AA', 'JJ', 'HH', 'BB', 'DD', 'EE', 'CC']: 1210
+['AA', 'JJ', 'HH', 'BB', 'DD', 'EE']: 1180
+['AA', 'JJ', 'HH', 'BB', 'EE', 'DD', 'CC']: 1160
+['AA', 'JJ', 'HH', 'CC', 'BB', 'DD', 'EE']: 1232
+['AA', 'JJ', 'HH', 'CC', 'BB', 'EE', 'DD']: 1012
+['AA', 'JJ', 'HH', 'CC', 'DD', 'BB', 'EE']: 1213
+['AA', 'JJ', 'HH', 'CC', 'DD', 'BB']: 1083
+['AA', 'JJ', 'HH', 'CC', 'DD', 'EE', 'BB']: 1136
+['AA', 'JJ', 'HH', 'CC', 'DD', 'EE']: 1103
+['AA', 'JJ', 'HH', 'CC', 'EE', 'DD', 'BB']: 1080
+['AA', 'JJ', 'HH', 'DD', 'BB', 'CC', 'EE']: 1321
+['AA', 'JJ', 'HH', 'DD', 'BB', 'CC']: 1297
+['AA', 'JJ', 'HH', 'DD', 'BB', 'EE', 'CC']: 1301
+['AA', 'JJ', 'HH', 'DD', 'BB', 'EE']: 1271
+['AA', 'JJ', 'HH', 'DD', 'BB']: 1115
+['AA', 'JJ', 'HH', 'DD', 'CC', 'BB', 'EE']: 1321
+['AA', 'JJ', 'HH', 'DD', 'CC', 'BB']: 1165
+['AA', 'JJ', 'HH', 'DD', 'CC', 'EE', 'BB']: 1196
+['AA', 'JJ', 'HH', 'DD', 'CC', 'EE']: 1163
+['AA', 'JJ', 'HH', 'DD', 'CC']: 1135
+['AA', 'JJ', 'HH', 'DD', 'EE', 'BB', 'CC']: 1330
+['AA', 'JJ', 'HH', 'DD', 'EE', 'BB']: 1174
+['AA', 'JJ', 'HH', 'DD', 'EE', 'CC', 'BB']: 1203
+['AA', 'JJ', 'HH', 'DD', 'EE', 'CC']: 1177
+['AA', 'JJ', 'HH', 'DD', 'EE']: 1135
+['AA', 'JJ', 'HH', 'EE', 'BB', 'CC', 'DD']: 1090
+['AA', 'JJ', 'HH', 'EE', 'BB', 'CC']: 1064
+['AA', 'JJ', 'HH', 'EE', 'BB', 'DD', 'CC']: 1291
+['AA', 'JJ', 'HH', 'EE', 'BB', 'DD']: 1051
+['AA', 'JJ', 'HH', 'EE', 'CC', 'BB', 'DD']: 1084
+['AA', 'JJ', 'HH', 'EE', 'CC', 'DD', 'BB']: 1175
+['AA', 'JJ', 'HH', 'EE', 'DD', 'BB', 'CC']: 1370
+['AA', 'JJ', 'HH', 'EE', 'DD', 'BB']: 1188
+['AA', 'JJ', 'HH', 'EE', 'DD', 'CC', 'BB']: 1238
+['AA', 'JJ', 'HH', 'EE', 'DD', 'CC']: 1208
+1631
+nils@MacBook-Air-von-Nils 16 % 
