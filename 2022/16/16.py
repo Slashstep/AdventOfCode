@@ -1,4 +1,4 @@
-# Part 1: 2181, 2201, Part 2: x < 3332
+# Part 1: 2181, Part 2: 2824
 
 import networkx as nx
 import matplotlib.pyplot as plt
@@ -74,9 +74,9 @@ def drawGraph(graph):
     plt.show()
 
 def traverseNeighbors(time, currentNode, visitedNodes):
-    if time > 30:
+    global resArr, results
+    if time > totalTime:
         return
-    
     visitedNodes.append(currentNode)
     for n in list(W.neighbors(currentNode)):
         if n in visitedNodes:
@@ -85,12 +85,11 @@ def traverseNeighbors(time, currentNode, visitedNodes):
         newVisited = visitedNodes
         weight = W.get_edge_data(currentNode, n)["weight"]
         traverseNeighbors(time + weight + 1, n, newVisited)
-    
     x = calculateRelease(visitedNodes)
-    if x > 750:
+    if x > 1000:    #Limit to ignore paths with a low release value
         results.append(x)
-        resArr.append(visitedNodes)
-        print(str(visitedNodes) + ": " + str(x))
+        testArr = str(visitedNodes) #Somehow the appended array gets changed when exiting the recursion witch is why i transform it to a string
+        resArr.append(testArr)
 
     visitedNodes.pop(visitedNodes.index(currentNode))
 
@@ -116,7 +115,6 @@ def calculateRelease(arr):
     return release
 
 def findBestRoute(startNode):
-    possiblePaths =[]
     time = 0
     for n in list(W.neighbors(startNode)):
         visitedNodes = [startNode]
@@ -127,22 +125,20 @@ def findBestRoute(startNode):
 
 def checkForTwoActors():
     resis = []
-    for i in range(len(resArr)-1):
-        for j in range(len(resArr)):
-            test = resArr[i] + resArr[j]
-            test = set(test)
-            if len(test) == len(resArr[i]) + len(resArr[j])-1:
+    rsArrTemp = []
+    for i in resArr:
+        rsArrTemp.append(eval(i))
+    for i in range(1, len(rsArrTemp)-1):
+        for j in range(i + 1, len(rsArrTemp)):
+            if len(set(rsArrTemp[i] + rsArrTemp[j])) == len(rsArrTemp[i]) + len(rsArrTemp[j])-1:
                 resis.append((results[i]+results[j], i, j))
 
     t = max(resis)
     print(t)
-    print(resArr[t[1]])
-    print(resArr[t[2]])
 
 inputToArray()
 parseInputToCoordinates(lines)
 inputToUnweightedGraph()
 CreateWeightedGraph()
 findBestRoute("AA")
-#drawGraph(G)
 checkForTwoActors()
