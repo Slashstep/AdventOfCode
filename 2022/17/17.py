@@ -3,7 +3,7 @@
 jets = ""
 arrSize = 10000
 cave = [[" " for row in range(0, 7)] for col in range(0, arrSize)]
-limit = 1000000000000
+limit = 1000000000000   #Change for Part 1 or 2
 stones = [[(0, 0), (1, 0), (2, 0), (3, 0)], [(1, 0), (0, 1), (1, 1), (2, 1), (1, 2)], [(2, 0), (2, 1), (0, 2), (1, 2), (2, 2)], [(0, 0), (0, 1), (0, 2), (0, 3)], [(0, 0), (1, 0), (0, 1), (1, 1)]]
 stoneDic = {}
 isCycleDetected = False
@@ -40,8 +40,7 @@ def rollingStones():
         fallingStone(ArrayHeight(currentStoneHeight) - 3, form, height)
         rockCounter += 1
 
-    print(cHeight + currentStoneHeight)
-    
+    print(cHeight + currentStoneHeight)    
 
 def fallingStone(start, form, height):
     global jetCounter, currentStoneHeight, isCycleDetected, limit, cHeight, rockCounter
@@ -87,37 +86,12 @@ def fallingStone(start, form, height):
 
     if isCycleDetected == False:
     
-        yTupleMax = [0, 0, 0, 0, 0, 0, 0]
-        for j in range(ArrayHeight(currentStoneHeight) - 100, len(cave), 1):
-            if cave[j][0] == "#" or j == len(cave)-1:
-                y0 = j +1
-                break
-        for j in range(ArrayHeight(currentStoneHeight) - 100, len(cave), 1):
-            if cave[j][1] == "#" or j == len(cave)-1:
-                y1 = j +1
-                break
-        for j in range(ArrayHeight(currentStoneHeight) - 100, len(cave), 1):
-            if cave[j][2] == "#" or j == len(cave)-1:
-                y2 = j +1
-                break
-        for j in range(ArrayHeight(currentStoneHeight) - 100, len(cave), 1):
-            if cave[j][3] == "#" or j == len(cave)-1:
-                y3 = j +1
-                break
-        for j in range(ArrayHeight(currentStoneHeight) - 100, len(cave), 1):
-            if cave[j][4] == "#" or j == len(cave)-1:
-                y4 = j +1
-                break
-        for j in range(ArrayHeight(currentStoneHeight) - 100, len(cave), 1):
-            if cave[j][5] == "#" or j == len(cave)-1:
-                y5 = j +1
-                break
-        for j in range(ArrayHeight(currentStoneHeight) - 100, len(cave), 1):
-            if cave[j][6] == "#" or j == len(cave)-1:
-                y6 = j +1
-                break
-
-        yTupleMax = [y0, y1, y2, y3, y4, y5, y6]
+        yTupleMax = []
+        for i in range(7):
+            for j in range(ArrayHeight(currentStoneHeight) - 100, len(cave), 1):
+                if cave[j][i] == "#" or j == len(cave)-1:
+                    yTupleMax.append(j +1)
+                    break
 
         minY = min(yTupleMax)
         yTuple = [mc - minY for mc in yTupleMax]
@@ -126,32 +100,22 @@ def fallingStone(start, form, height):
 
         # Cycle Detected
         if state in stoneDic:
-            print(str(stoneDic[state]))
-            print(rockCounter)
             cycleLength = rockCounter - stoneDic[state]["stones"]
-            print(cycleLength)
             cycleHeight = currentStoneHeight - stoneDic[state]["height"]
-            print(cycleHeight)
 
             remainingStones = limit - rockCounter
-            print(remainingStones)
 
             rep = remainingStones // cycleLength
-            print(rep)
             rem = remainingStones % cycleLength
-            print(rem)
 
-            heightWithoutRem = cycleHeight * rep
-            print(heightWithoutRem)
+            cHeight = cycleHeight * rep
             rockCounter = limit - rem
-            cHeight = heightWithoutRem
 
             isCycleDetected = True
         else:
             stoneDic[state] = {"height": currentStoneHeight, "stones": rockCounter}
 
 def findCurrentStoneHeight(stone):
-    global shortCounter
     for i in range(ArrayHeight(currentStoneHeight) - 50, len(cave), 1):
         hasHashtag = False
         for j in range(7):
@@ -161,7 +125,6 @@ def findCurrentStoneHeight(stone):
         
         if hasHashtag == True:
             return arrSize - i
-
 
 inputToArray()
 rollingStones()
