@@ -1,0 +1,15 @@
+/Users/nils/Library/CloudStorage/OneDrive-Persönlich/Dokumente/Coden/AdventOfCode/2021/04/obj/Debug/net7.0/04.csproj.AssemblyReference.cache
+/Users/nils/Library/CloudStorage/OneDrive-Persönlich/Dokumente/Coden/AdventOfCode/2021/04/obj/Debug/net7.0/04.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nils/Library/CloudStorage/OneDrive-Persönlich/Dokumente/Coden/AdventOfCode/2021/04/obj/Debug/net7.0/04.AssemblyInfoInputs.cache
+/Users/nils/Library/CloudStorage/OneDrive-Persönlich/Dokumente/Coden/AdventOfCode/2021/04/obj/Debug/net7.0/04.AssemblyInfo.cs
+/Users/nils/Library/CloudStorage/OneDrive-Persönlich/Dokumente/Coden/AdventOfCode/2021/04/obj/Debug/net7.0/04.csproj.CoreCompileInputs.cache
+/Users/nils/Library/CloudStorage/OneDrive-Persönlich/Dokumente/Coden/AdventOfCode/2021/04/bin/Debug/net7.0/04
+/Users/nils/Library/CloudStorage/OneDrive-Persönlich/Dokumente/Coden/AdventOfCode/2021/04/bin/Debug/net7.0/04.deps.json
+/Users/nils/Library/CloudStorage/OneDrive-Persönlich/Dokumente/Coden/AdventOfCode/2021/04/bin/Debug/net7.0/04.runtimeconfig.json
+/Users/nils/Library/CloudStorage/OneDrive-Persönlich/Dokumente/Coden/AdventOfCode/2021/04/bin/Debug/net7.0/04.dll
+/Users/nils/Library/CloudStorage/OneDrive-Persönlich/Dokumente/Coden/AdventOfCode/2021/04/bin/Debug/net7.0/04.pdb
+/Users/nils/Library/CloudStorage/OneDrive-Persönlich/Dokumente/Coden/AdventOfCode/2021/04/obj/Debug/net7.0/04.dll
+/Users/nils/Library/CloudStorage/OneDrive-Persönlich/Dokumente/Coden/AdventOfCode/2021/04/obj/Debug/net7.0/refint/04.dll
+/Users/nils/Library/CloudStorage/OneDrive-Persönlich/Dokumente/Coden/AdventOfCode/2021/04/obj/Debug/net7.0/04.pdb
+/Users/nils/Library/CloudStorage/OneDrive-Persönlich/Dokumente/Coden/AdventOfCode/2021/04/obj/Debug/net7.0/04.genruntimeconfig.cache
+/Users/nils/Library/CloudStorage/OneDrive-Persönlich/Dokumente/Coden/AdventOfCode/2021/04/obj/Debug/net7.0/ref/04.dll
