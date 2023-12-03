@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Diagnostics;
 
-class Day02{
+class Day03{
 
     static public List<Number> Numbers = new List<Number>();
     static public List<Symbol> Symbols = new List<Symbol>();

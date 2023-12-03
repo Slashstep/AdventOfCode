@@ -5,7 +5,7 @@ sArr = []
 
 def InputToArray():
     global lines, sArr
-    with open("input.txt", "r") as f:
+    with open("calc.txt", "r") as f:
         lines = f.read().splitlines()
 
     for l in lines:
@@ -66,4 +66,4 @@ def ChangeHuman(vName, diference):
 
 InputToArray()
 print(int(VarFinder("root")))   #Part 1
-ChangeHuman("root", 0)          #Part 2
+ChangeHuman("root")          #Part 2
