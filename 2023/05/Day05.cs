@@ -141,7 +141,7 @@ class Day05{
     }
 
     //Part 1: 525792406
-    //Part 2: 79004094 goal
+    //Part 2: 79004094
 
     public static void Main(string[] args){
         Input = ReadFile();
