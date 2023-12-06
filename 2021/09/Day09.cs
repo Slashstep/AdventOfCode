@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-class Day08{
+class Day09{
 
     static public List<string> Input = new List<string>();
 
@@ -150,8 +150,8 @@ class Day08{
         return true;
     }
 
-    //Part 1: 245
-    //Part 2: 983026
+    //Part 1: 
+    //Part 2: 
     public static void Main(string[] args){
         Input = ReadFile();
         Part1();
