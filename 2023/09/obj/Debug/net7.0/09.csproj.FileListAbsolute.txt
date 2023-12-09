@@ -1,0 +1,15 @@
+/Users/nils/Documents/AdventOfCode/2023/09/obj/Debug/net7.0/09.csproj.AssemblyReference.cache
+/Users/nils/Documents/AdventOfCode/2023/09/obj/Debug/net7.0/09.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nils/Documents/AdventOfCode/2023/09/obj/Debug/net7.0/09.AssemblyInfoInputs.cache
+/Users/nils/Documents/AdventOfCode/2023/09/obj/Debug/net7.0/09.AssemblyInfo.cs
+/Users/nils/Documents/AdventOfCode/2023/09/obj/Debug/net7.0/09.csproj.CoreCompileInputs.cache
+/Users/nils/Documents/AdventOfCode/2023/09/bin/Debug/net7.0/09
+/Users/nils/Documents/AdventOfCode/2023/09/bin/Debug/net7.0/09.deps.json
+/Users/nils/Documents/AdventOfCode/2023/09/bin/Debug/net7.0/09.runtimeconfig.json
+/Users/nils/Documents/AdventOfCode/2023/09/bin/Debug/net7.0/09.dll
+/Users/nils/Documents/AdventOfCode/2023/09/bin/Debug/net7.0/09.pdb
+/Users/nils/Documents/AdventOfCode/2023/09/obj/Debug/net7.0/09.dll
+/Users/nils/Documents/AdventOfCode/2023/09/obj/Debug/net7.0/refint/09.dll
+/Users/nils/Documents/AdventOfCode/2023/09/obj/Debug/net7.0/09.pdb
+/Users/nils/Documents/AdventOfCode/2023/09/obj/Debug/net7.0/09.genruntimeconfig.cache
+/Users/nils/Documents/AdventOfCode/2023/09/obj/Debug/net7.0/ref/09.dll

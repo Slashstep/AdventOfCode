@@ -1,0 +1,62 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/nils/Documents/AdventOfCode/2021/11/11.csproj": {}
+  },
+  "projects": {
+    "/Users/nils/Documents/AdventOfCode/2021/11/11.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/nils/Documents/AdventOfCode/2021/11/11.csproj",
+        "projectName": "11",
+        "projectPath": "/Users/nils/Documents/AdventOfCode/2021/11/11.csproj",
+        "packagesPath": "/Users/nils/.nuget/packages/",
+        "outputPath": "/Users/nils/Documents/AdventOfCode/2021/11/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/nils/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.311/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
