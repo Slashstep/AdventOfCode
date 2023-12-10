@@ -27,54 +27,94 @@ class Day11{
 
     static List<Octopus> Octos = new List<Octopus>();
     static void Part1(){
-
         for (int y = 0; y < 10; y++){
             for (int x = 0; x < 10; x++){
                 Octos.Add(new Octopus(int.Parse(Input[y][x].ToString()), new Vector2(x, y)));
             }
         }
 
-        PrintList(Octos);
-
-        for (int i = 0; i < 10; i++){
+        int counter = 0;
+        for (int i = 0; i < 100; i++){
             foreach(Octopus o in Octos){
+                o.isFlashing = false;
                 o.Value++;
             }
-            foreach(Octopus o in Octos){
-                IncreaseOctopus(o);
-            }
+            bool hasFlashed = true;
+            while (hasFlashed){
+                hasFlashed = false;
 
-            PrintList(Octos);
-        }
-    }
-
-    static void Part2(){
-        
-    }
-
-    static void IncreaseOctopus(Octopus octo){
-        if (octo.isFlashing){
-            return;
-        }
-
-        if (octo.Value > 9){
-            octo.isFlashing = true;
-            octo.Value = 0;
-
-            for (int y = -1; y <= 1; y++){
-                for (int x = -1; x <= 1; x++){
-                    Octopus nextOctopus = Octos.Find(o => o.Pos == new Vector2(o.Pos.X + x, o.Pos.Y + y));
-
-                    if (nextOctopus == null){
-                        continue;
+                for (int j = 0; j < Octos.Count; j++){
+                    if (Octos[j].Value > 9 && !Octos[j].isFlashing){
+                        counter++;
+                        IncreaseOctopus(Octos[j]);
+                        hasFlashed = true;
+                        break;
                     }
-
-                    IncreaseOctopus(nextOctopus);
                 }
             }
         }
 
-        return;
+        Console.WriteLine(counter);
+    }
+
+    static void Part2(){
+        Octos = new List<Octopus>();
+        for (int y = 0; y < 10; y++){
+            for (int x = 0; x < 10; x++){
+                Octos.Add(new Octopus(int.Parse(Input[y][x].ToString()), new Vector2(x, y)));
+            }
+        }
+
+        int index = 0;
+        bool isSynchronos = false;
+        while (!isSynchronos){
+            isSynchronos = true;
+            index++;
+            foreach(Octopus o in Octos){
+                o.isFlashing = false;
+                o.Value++;
+            }
+            
+            bool hasFlashed = true;
+            while (hasFlashed){
+                hasFlashed = false;
+
+                for (int j = 0; j < Octos.Count; j++){
+                    if (Octos[j].Value > 9 && !Octos[j].isFlashing){
+                        IncreaseOctopus(Octos[j]);
+                        hasFlashed = true;
+                        break;
+                    }
+                }
+            }
+            
+            foreach (Octopus o in Octos){
+                if (!o.isFlashing){
+                    isSynchronos = false;
+                    break;
+                }
+            }
+        }
+        
+        Console.WriteLine(index);
+    }
+
+    static void IncreaseOctopus(Octopus octo){
+        octo.isFlashing = true;
+        octo.Value = 0;
+
+        for (int y = -1; y <= 1; y++){
+            for (int x = -1; x <= 1; x++){
+                Octopus nextOctopus = Octos.Find(o => o.Pos == new Vector2(octo.Pos.X + x, octo.Pos.Y + y));
+
+                if (nextOctopus == null){
+                    continue;
+                }
+                if (!nextOctopus.isFlashing){
+                    nextOctopus.Value++;
+                }
+            }
+        }
     }
 
     static void PrintList(List<Octopus> o){
@@ -91,8 +131,8 @@ class Day11{
         Console.WriteLine(s);
     }
 
-    //Part 1: 
-    //Part 2: 
+    //Part 1: 1681
+    //Part 2: 276
               
     public static void Main(string[] args){
         Input = ReadFile();
