@@ -13,3 +13,10 @@
 /Users/nils/Documents/AdventOfCode/2023/12/obj/Debug/net7.0/12.pdb
 /Users/nils/Documents/AdventOfCode/2023/12/obj/Debug/net7.0/12.genruntimeconfig.cache
 /Users/nils/Documents/AdventOfCode/2023/12/obj/Debug/net7.0/ref/12.dll
+/Users/nils/Documents/AdventOfCode/2023/12/bin/Debug/net7.0/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/nils/Documents/AdventOfCode/2023/12/bin/Debug/net7.0/Microsoft.Extensions.Caching.Memory.dll
+/Users/nils/Documents/AdventOfCode/2023/12/bin/Debug/net7.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/nils/Documents/AdventOfCode/2023/12/bin/Debug/net7.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/nils/Documents/AdventOfCode/2023/12/bin/Debug/net7.0/Microsoft.Extensions.Options.dll
+/Users/nils/Documents/AdventOfCode/2023/12/bin/Debug/net7.0/Microsoft.Extensions.Primitives.dll
+/Users/nils/Documents/AdventOfCode/2023/12/obj/Debug/net7.0/12.csproj.CopyComplete
