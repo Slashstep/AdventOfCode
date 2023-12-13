@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Numerics;
-using System.Diagnostics;
+﻿class Day13{
 
-class Day13{
-
-    static public List<string> Input = new List<string>();
+    static public List<string> Input = ReadFile();
+    static List<Pattern> Patterns = GetPatterns();
 
     static List<string> ReadFile(){
         List<string> lines = new List<string>();
@@ -45,48 +38,18 @@ class Day13{
         return patterns;
     }
 
-    static List<SmudgePattern> GetSmudgePatterns()
-    {
-        List<SmudgePattern> patterns = new List<SmudgePattern>();
-        List<string> lines = new List<string>();
-
-        for (int i = 0; i < Input.Count; i++)
-        {
-            if (Input[i] == "")
-            {
-                patterns.Add(new SmudgePattern(new List<string>(lines)));
-                lines.Clear();
-            }
-            else
-            {
-                lines.Add(Input[i]);
-            }
-        }
-        patterns.Add(new SmudgePattern(new List<string>(lines)));
-        return patterns;
-    }
-
     static void Part1(){
-        List<Pattern> patterns = GetPatterns();
-
         int counter = 0;
-        foreach (Pattern p in patterns)
-        {
+        foreach (Pattern p in Patterns)
             counter += p.TotalValue;
-        }
 
         Console.WriteLine(counter);
     }
 
     static void Part2(){
-        List<SmudgePattern> patterns = GetSmudgePatterns();
-
         int counter = 0;
-        foreach (SmudgePattern p in patterns)
-        {
-            counter += p.TotalValue;
-            Console.WriteLine(p.TotalValue);
-        }
+        foreach (Pattern p in Patterns)
+            counter += p.SmudgeValue;
 
         Console.WriteLine(counter);
     }
@@ -95,7 +58,6 @@ class Day13{
     //Part 2: 27587
 
     public static void Main(string[] args){
-        Input = ReadFile();
         Part1();
         Part2();
     }
@@ -103,33 +65,45 @@ class Day13{
 
 class Pattern{
     public List<string> Lines = new List<string>();
-    public int VerticalValue;
-    public int HorizontalValue;
+    public List<string> LinesTurned = new List<string>();
     public int TotalValue;
+    public int SmudgeValue;
 
     public Pattern(List<string> lines){
         Lines = lines;
-        VerticalValue = CheckVertical();
-        HorizontalValue = CheckHorizontal();
+        LinesTurned = TurnLines();
+
+        int VerticalValue = CheckVertical();
+        int HorizontalValue = CheckHorizontal();
         if (VerticalValue > HorizontalValue) TotalValue = VerticalValue;
         else TotalValue = 100 * HorizontalValue;
+
+        int SmudgeVertical = CheckSmudgeVertical();
+        int SmudgeHorizontal = CheckSmudgeHorizontal();
+        if (SmudgeVertical > SmudgeHorizontal) SmudgeValue = SmudgeVertical;
+        else SmudgeValue = 100 * SmudgeHorizontal;
     }
 
-    public int CheckVertical()
+    List<string> TurnLines()
     {
-        List<string> LinesTurned = new List<string>();
-        List<string> verticalLines = new List<string>();
-        List<(int, int)> symmetries = new List<(int, int)>();
+        List<string> lt = new List<string>();
 
         for (int i = 0; i < Lines[0].Length; i++)
         {
             string s = "";
-
             for (int y = 0; y < Lines.Count; y++)
                 s += Lines[y][i];
 
-            LinesTurned.Add(s);
+            lt.Add(s);
         }
+
+        return lt;
+    }
+
+    int CheckVertical()
+    {
+        List<string> verticalLines = new List<string>();
+        List<(int, int)> symmetries = new List<(int, int)>();
 
         for (int i = 0; i < LinesTurned.Count; i++)
         { 
@@ -157,7 +131,7 @@ class Pattern{
         else return symmetries[0].Item1;
     }
 
-    public int CheckHorizontal()
+    int CheckHorizontal()
     {
         List<string> horizontalLines = new List<string>();
         List<(int, int)> symmetries = new List<(int, int)>();
@@ -187,37 +161,11 @@ class Pattern{
         if (symmetries.Count == 0) return 0;
         else return symmetries[0].Item1;
     }
-}
 
-class SmudgePattern{
-    public List<string> Lines = new List<string>();
-    public int VerticalValue;
-    public int HorizontalValue;
-    public int TotalValue;
-
-    public SmudgePattern(List<string> lines){
-        Lines = lines;
-        VerticalValue = CheckVertical();
-        HorizontalValue = CheckHorizontal();
-        if (VerticalValue > HorizontalValue) TotalValue = VerticalValue;
-        else TotalValue = 100 * HorizontalValue;
-    }
-
-    public int CheckVertical()
+    int CheckSmudgeVertical()
     {
-        List<string> LinesTurned = new List<string>();
         List<string> verticalLines = new List<string>();
         List<(int, int)> symmetries = new List<(int, int)>();
-
-        for (int i = 0; i < Lines[0].Length; i++)
-        {
-            string s = "";
-
-            for (int y = 0; y < Lines.Count; y++)
-                s += Lines[y][i];
-
-            LinesTurned.Add(s);
-        }
 
         for (int i = 0; i < LinesTurned.Count; i++)
         {
@@ -253,23 +201,16 @@ class SmudgePattern{
         if (symmetries.Count == 0) return 0;
         else
         {
-            foreach ((int, int) i in symmetries)
-            {
-                Console.WriteLine(i.Item1.ToString() + ", " + i.Item2.ToString() + "vertical");
-            }
-            Console.WriteLine("");
-
-            Pattern newPat = new Pattern(Lines);
-            if (symmetries[0].Item1 == newPat.TotalValue)
+            if (symmetries[0].Item1 == TotalValue)
             {
                 if (symmetries.Count > 1) return symmetries[1].Item1;
                 else return 0;
             }
             else return symmetries[0].Item1;
-        } 
+        }
     }
 
-    public int CheckHorizontal()
+    int CheckSmudgeHorizontal()
     {
         List<string> horizontalLines = new List<string>();
         List<(int, int)> symmetries = new List<(int, int)>();
@@ -308,14 +249,7 @@ class SmudgePattern{
         if (symmetries.Count == 0) return 0;
         else
         {
-            foreach ((int, int) i in symmetries)
-            {
-                Console.WriteLine(i.Item1.ToString() + ", " + i.Item2.ToString() + "horizontal");
-            }
-            Console.WriteLine("");
-
-            Pattern newPat = new Pattern(Lines);
-            if (symmetries[0].Item1 * 100 == newPat.TotalValue)
+            if (symmetries[0].Item1 * 100 == TotalValue)
             {
                 if (symmetries.Count > 1) return symmetries[1].Item1;
                 else return 0;

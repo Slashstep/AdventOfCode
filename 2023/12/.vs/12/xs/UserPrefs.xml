@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{4DCF3570-B3CF-4D31-844F-1373D65B4067}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Day12.cs">
+    <Files>
+      <File FileName="Day12.cs" Line="23" Column="22" />
+      <File FileName="input.txt" Line="17" Column="17" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="12">
+            <Node name="12">
+              <Node name="Day12.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint enabled="false" file="/Users/nils/Documents/AdventOfCode/2023/12/Day12.cs" relfile="Day12.cs" line="169" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.12 PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
