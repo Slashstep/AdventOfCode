@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{FDC09ED0-803F-4FA2-A8DD-FB2BEB33FB13}|Default">
+  <MonoDevelop.Ide.ItemProperties.14 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Day14.cs">
+    <Files>
+      <File FileName="Day14.cs" Line="33" Column="10" />
+      <File FileName="input.txt" Line="100" Column="101" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="14" expanded="True">
+            <Node name="14">
+              <Node name="Day14.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
