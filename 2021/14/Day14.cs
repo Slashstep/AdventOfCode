@@ -61,6 +61,9 @@ class Day14{
     static void Part2(){
         List<Rule> Rules = GetRules();
 
+        //Filter out Rules, that basically reproduce themselves and ignore them
+        //Create the resulting string but don't count it in
+
         string polymer = Input[0];
         for (int i = 0; i < 40; i++){
             string newPolymer = polymer[0].ToString();
