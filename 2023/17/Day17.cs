@@ -63,7 +63,6 @@ class Day17{
         HashSet<Node> closedSet = new HashSet<Node>();
 
         openSet.Add(sNode);
-        sNode.GCost = 0;
 
         Node cNode;
         while (openSet.Count > 0)
@@ -75,7 +74,6 @@ class Day17{
 
             if (cNode == fNode)
             {
-                TracePath(sNode, fNode);
                 Console.WriteLine(fNode.GCost);
                 return;
             }
@@ -85,9 +83,9 @@ class Day17{
                 if (closedSet.Contains(n))
                     continue;
 
-                n.StraightDist = GetStraightParents(cNode, n);
-                if (n.StraightDist > 2)
-                    continue;
+                n.StraightDist = CheckDirection(cNode, n);
+                //if (CheckDirection(cNode, n) > 2)
+                //    continue;
 
                 int newMovementCostToNeighbour = cNode.GCost + n.Value;
 
@@ -103,7 +101,7 @@ class Day17{
         }
     }
 
-    static int GetStraightParents(Node par, Node next)
+    static int CheckDirection(Node par, Node next)
     {
         int counter = 0;
         bool isTurn = false;
@@ -126,65 +124,13 @@ class Day17{
         return counter;
     }
 
-    static List<Node> TracePath(Node sNode, Node fNode)
-    {
-        Console.WriteLine("Path found");
-        List<Node> Path = new List<Node>();
-        Node currentNode = fNode;
-
-        while (currentNode != sNode)
-        {
-            Console.WriteLine(currentNode.PosX.ToString() + ", " + currentNode.PosY.ToString());
-            Path.Add(currentNode);
-            currentNode = currentNode.Parent;
-        }
-
-        Path.Reverse();
-
-        return Path;
-    }
-
     static void Part1(){
         List<Node> Nodes = GetNodes();
 
         Node? startNode = Nodes.Find(n => n.PosX == 0 && n.PosY == 0);
         Node? endNode = Nodes.Find(n => n.PosX == Input[0].Length - 1 && n.PosY == Input.Count - 1);
-        //Node? endNode = Nodes.Find(n => n.PosX == 8 && n.PosY == 0);
 
         FindPath(startNode, endNode);
-        /*
-        startNode.GCost = 0;
-
-        while (Nodes.Count > 0)
-        {
-            Nodes = Nodes.OrderBy(n => n.GCost).ToList();
-            Node cNode = Nodes[0];
-            Nodes.RemoveAt(0);
-            cNode.PrintNode();
-
-            if (cNode == endNode)
-            {
-                Console.WriteLine(endNode.GCost);
-                return;
-            }
-
-            foreach (Node n in cNode.Neighbours)
-            {
-                if (!Nodes.Contains(n)) continue;
-                int straight = GetStraightParents(cNode, n);
-                if (straight > 2) continue;
-
-                int newMovementCostToNeighbour = cNode.GCost + n.Value;
-
-                if (newMovementCostToNeighbour < n.GCost)
-                {
-                    n.GCost = newMovementCostToNeighbour;
-                    n.Parent = cNode;
-                }
-
-            }
-        }
-        */
     }
 
 
@@ -220,7 +166,7 @@ class Node : IEquatable<Node>
         PosY = posY;
         Value = value;
         Neighbours = new List<Node>();
-        GCost = 10000;
+        GCost = 0;
     }
 
     public bool Equals(Node? other)
@@ -231,7 +177,9 @@ class Node : IEquatable<Node>
 
     public void PrintNode()
     {
-        Console.WriteLine(PosX.ToString() + ", " + PosY.ToString() + ": " + GCost.ToString() + ", "
-            + HCost.ToString() + ", " + FCost.ToString());
+        if (Parent == null)
+            Console.WriteLine(PosX.ToString() + ", " + PosY.ToString() + ": " + GCost.ToString());
+        else
+            Console.WriteLine(PosX.ToString() + ", " + PosY.ToString() + ": " + GCost.ToString() + ": " + Parent.PosX.ToString() + ", " + Parent.PosY.ToString());
     }
 }
