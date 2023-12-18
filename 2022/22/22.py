@@ -4,7 +4,7 @@
 # y = 73, x = 66
 # Answer part 1: 66292
 # y = 3, x = 127
-#Answer part 2: 127012
+# Answer part 2: 127012
 
 route = ""
 nav = []
