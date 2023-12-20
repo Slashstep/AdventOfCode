@@ -5,6 +5,8 @@ using System.Xml.Linq;
 class Day17{
 
     static public List<string> Input = new List<string>();
+    static public int[,] Grid;
+    static public (int, int)[] Dirs = { (-1, 0), (1, 0), (0, -1), (0, 1) };
 
     static List<string> ReadFile(){
         List<string> lines = new List<string>();
@@ -23,186 +25,91 @@ class Day17{
         return lines;
     }
 
-    static List<Node> GetNodes()
+    static void CreateGrid()
     {
-        List<Node> Nodes = new List<Node>();
-
+        Grid = new int[Input[0].Length, Input.Count];
         for (int i = 0; i < Input.Count; i++)
         {
             for (int j = 0; j < Input[i].Length; j++)
             {
-                Nodes.Add(new Node(j, i, int.Parse(Input[i][j].ToString())));
+                Grid[j, i] = int.Parse(Input[i][j].ToString());
             }
         }
-
-        foreach(Node n in Nodes)
-        {
-            //Check left
-            Node? nLeft = Nodes.Find(node => node.PosX == n.PosX - 1 && node.PosY == n.PosY);
-            if (nLeft != null) n.Neighbours.Add(nLeft);
-
-            //Check right
-            Node? nRight = Nodes.Find(node => node.PosX == n.PosX + 1 && node.PosY == n.PosY);
-            if (nRight != null) n.Neighbours.Add(nRight);
-
-            //Check up
-            Node? nUp = Nodes.Find(node => node.PosX == n.PosX && node.PosY - 1 == n.PosY);
-            if (nUp != null) n.Neighbours.Add(nUp);
-
-            //Check down
-            Node? nDown = Nodes.Find(node => node.PosX == n.PosX && node.PosY + 1 == n.PosY);
-            if (nDown != null) n.Neighbours.Add(nDown);
-        }
-
-        return Nodes;
     }
+    
 
-    static void FindPath(Node sNode, Node fNode)
+    static void FindPath((int, int) sNode, (int, int) fNode)
     {
-        List<Node> openSet = new List<Node>();
-        HashSet<Node> closedSet = new HashSet<Node>();
+        List<(int val, (int x, int y, int dx, int dy, int s))> openSet = new List<(int, (int, int, int, int, int))>();
+        HashSet<(int, int, int, int)> closedSet = new HashSet<(int, int, int, int)>();
 
-        openSet.Add(sNode);
-        sNode.GCost = 0;
+        (int cost, (int x, int y, int dx, int dy, int s)node) cNode = (0, (sNode.Item1, sNode.Item2, 0, 0, 0));
+        openSet.Add(cNode);
 
-        Node cNode;
         while (openSet.Count > 0)
         {
-            openSet = openSet.OrderBy(n => n.GCost).ToList();
-            for (int i = 0; i < Math.Min(5, openSet.Count); i++)
-                openSet[i].PrintNode();
-            Console.WriteLine("");
+            openSet = openSet.OrderBy(n => n.Item1).ToList();
             cNode = openSet[0];
-            if (cNode.StraightDist > 2)
-                closedSet.Add(cNode);
             openSet.RemoveAt(0);
 
-            if (cNode == fNode)
+            closedSet.Add((cNode.node.x, cNode.node.y, cNode.node.dx, cNode.node.dy));
+            Console.WriteLine(cNode);
+
+            if (cNode.node.x == fNode.Item1 && cNode.node.y == fNode.Item2)
             {
-                //TracePath(sNode, fNode);
-                Console.WriteLine(fNode.GCost);
+                Console.WriteLine(cNode.cost);
                 return;
             }
 
-            foreach (Node n in cNode.Neighbours)
+            foreach ((int x, int y) d in Dirs)
             {
-                if (closedSet.Contains(n))
+                int nX = cNode.node.x + d.x;
+                int nY = cNode.node.y + d.y;
+
+                if (nX < 0 || nX >= Input[0].Length || nY < 0 || nY >= Input.Count)
                     continue;
 
-                if (CheckDirection(cNode, n) > 2)
+                if (cNode.node.dx * d.x < 0 || cNode.node.dy * d.y < 0)
                     continue;
 
-                int newMovementCostToNeighbour = cNode.GCost + n.Value;
+                int newCost = cNode.cost + Grid[nX, nY];
+                int s = 0;
+                if (cNode.node.dx == d.x && cNode.node.dy == d.y)
+                    s = cNode.node.s + 1;
 
-                if (newMovementCostToNeighbour < n.GCost)
+                (int, int, int, int, int) nNode = (nX, nY, d.x, d.y, s);
+
+                if (closedSet.Contains((nX, nY, d.x, d.y)))
+                    continue;
+
+                if (s < 3)
                 {
-                    n.GCost = newMovementCostToNeighbour;
-                    n.Parent = cNode;
-                    n.StraightDist = CheckDirection(cNode, n);
-                    openSet.Add(n);
+                    if (!openSet.Any(t => t.Item2 == nNode))
+                        openSet.Add((newCost, nNode));
                 }
             }
         }
     }
 
-    static int CheckDirection(Node par, Node next)
+    static void Part1()
     {
-        int counter = 0;
-        bool isTurn = false;
-        int dirX = next.PosX - par.PosX;
-        int dirY = next.PosY - par.PosY;
-        Node cNode = par;
-        while (!isTurn)
-        {
-            if (cNode.Parent == null)
-                return counter;
-
-            int cDirX = cNode.PosX - cNode.Parent.PosX;
-            int cDirY = cNode.PosY - cNode.Parent.PosY;
-
-            if (cDirX == dirX && cDirY == dirY) counter++;
-            else isTurn = true;
-            cNode = cNode.Parent;
-        }
-
-        return counter;
+        FindPath((0, 0), (Input[0].Length - 1, Input.Count - 1));
     }
 
-    static List<Node> TracePath(Node sNode, Node fNode)
+
+    static void Part2()
     {
-        Console.WriteLine("Path found");
-        List<Node> Path = new List<Node>();
-        Node currentNode = fNode;
-
-        while (currentNode != sNode)
-        {
-            Console.WriteLine(currentNode.PosX.ToString() + ", " + currentNode.PosY.ToString());
-            Path.Add(currentNode);
-            currentNode = currentNode.Parent;
-        }
-
-        Path.Reverse();
-
-        return Path;
-    }
-
-    static void Part1(){
-        List<Node> Nodes = GetNodes();
-
-        Node? startNode = Nodes.Find(n => n.PosX == 0 && n.PosY == 0);
-        Node? endNode = Nodes.Find(n => n.PosX == Input[0].Length - 1 && n.PosY == Input.Count - 1);
-
-        FindPath(startNode, endNode);
-    }
-
-
-    static void Part2(){
 
     }
 
-    //Part 1: 783 soll 742
+    //Part 1: 738++ soll 742
     //Part 2: soll 918
 
-    public static void Main(string[] args){
+    public static void Main(string[] args)
+    {
         Input = ReadFile();
+        CreateGrid();
         Part1();
         Part2();
-    }
-}
-
-class Node : IEquatable<Node>
-{
-    public int PosX;
-    public int PosY;
-    public int Value;
-    public List<Node> Neighbours;
-    public Node? Parent;
-    public int StraightDist;
-    public int GCost;
-    public int HCost;
-    public int FCost { get { return GCost + HCost; } }
-
-    public Node (int posX, int posY, int value)
-    {
-        PosX = posX;
-        PosY = posY;
-        Value = value;
-        Neighbours = new List<Node>();
-        GCost = 1000000;
-        StraightDist = 0;
-    }
-
-    public bool Equals(Node? other)
-    {
-        if (this.PosX == other?.PosX && this.PosY == other?.PosY) return true;
-        else return false;
-    }
-
-    public void PrintNode()
-    {
-        if (Parent == null)
-            Console.WriteLine(PosX.ToString() + ", " + PosY.ToString() + ": " + GCost.ToString());
-        else
-            Console.WriteLine(PosX.ToString() + ", " + PosY.ToString() + ": " + GCost.ToString() + ": " + Parent.PosX.ToString() + ", " + Parent.PosY.ToString());
     }
 }
