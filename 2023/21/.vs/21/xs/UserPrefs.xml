@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{E37D1659-381B-42B5-9F64-69D5F8593276}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="input.txt">
+    <Files>
+      <File FileName="Day21.cs" Line="1" Column="1" />
+      <File FileName="input.txt" Line="1" Column="131" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="21" expanded="True">
+            <Node name="21" expanded="True">
+              <Node name="input.txt" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.21 PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
