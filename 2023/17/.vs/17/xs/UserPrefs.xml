@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{8A0A9776-73FB-4E63-AC2A-EBB8F561377E}|Default">
   <MonoDevelop.Ide.ItemProperties.17 PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="input.txt">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Day17.cs">
     <Files>
-      <File FileName="Day17.cs" Line="75" Column="57" />
-      <File FileName="input.txt" Line="141" Column="142" />
+      <File FileName="Day17.cs" Line="110" Column="48" />
+      <File FileName="input.txt" Line="141" Column="89" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="17">
             <Node name="17">
-              <Node name="input.txt" selected="True" />
+              <Node name="Day17.cs" selected="True" />
             </Node>
           </Node>
         </State>

@@ -38,12 +38,12 @@ class Day17{
     }
     
 
-    static void FindPath((int, int) sNode, (int, int) fNode)
+    static void FindPath((int, int) sNode, (int, int) fNode, int minSteps, int maxSteps)
     {
         List<(int val, (int x, int y, int dx, int dy, int s))> openSet = new List<(int, (int, int, int, int, int))>();
-        HashSet<(int, int, int, int)> closedSet = new HashSet<(int, int, int, int)>();
+        List<(int, int, int, int, int)> closedSet = new List<(int, int, int, int, int)>();
 
-        (int cost, (int x, int y, int dx, int dy, int s)node) cNode = (0, (sNode.Item1, sNode.Item2, 0, 0, 0));
+        (int cost, (int x, int y, int dx, int dy, int s)node) cNode = (0, (sNode.Item1, sNode.Item2, 0, 0, minSteps));
         openSet.Add(cNode);
 
         while (openSet.Count > 0)
@@ -52,13 +52,15 @@ class Day17{
             cNode = openSet[0];
             openSet.RemoveAt(0);
 
-            closedSet.Add((cNode.node.x, cNode.node.y, cNode.node.dx, cNode.node.dy));
-            Console.WriteLine(cNode);
+            closedSet.Add((cNode.node.x, cNode.node.y, cNode.node.dx, cNode.node.dy, cNode.node.s));
 
             if (cNode.node.x == fNode.Item1 && cNode.node.y == fNode.Item2)
             {
-                Console.WriteLine(cNode.cost);
-                return;
+                if (cNode.node.s >= minSteps)
+                {
+                    Console.WriteLine("{0} steps with min: {1} and max: {2}", cNode.cost, minSteps, maxSteps);
+                    return;
+                }
             }
 
             foreach ((int x, int y) d in Dirs)
@@ -77,12 +79,15 @@ class Day17{
                 if (cNode.node.dx == d.x && cNode.node.dy == d.y)
                     s = cNode.node.s + 1;
 
-                (int, int, int, int, int) nNode = (nX, nY, d.x, d.y, s);
-
-                if (closedSet.Contains((nX, nY, d.x, d.y)))
+                if (cNode.node.s < minSteps && s == 0)
                     continue;
 
-                if (s < 3)
+                (int, int, int, int, int) nNode = (nX, nY, d.x, d.y, s);
+
+                if (closedSet.Contains((nX, nY, d.x, d.y, s)))
+                    continue;
+
+                if (s < maxSteps)
                 {
                     if (!openSet.Any(t => t.Item2 == nNode))
                         openSet.Add((newCost, nNode));
@@ -93,17 +98,18 @@ class Day17{
 
     static void Part1()
     {
-        FindPath((0, 0), (Input[0].Length - 1, Input.Count - 1));
+        FindPath((0, 0), (Input[0].Length - 1, Input.Count - 1), 0, 3);
     }
 
 
     static void Part2()
     {
-
+        FindPath((0, 0), (Input[0].Length - 1, Input.Count - 1), 3, 10);
     }
 
-    //Part 1: 738++ soll 742
-    //Part 2: soll 918
+    //Don't worry, algorithm is just super slow
+    //Part 1: 742
+    //Part 2: 918
 
     public static void Main(string[] args)
     {
