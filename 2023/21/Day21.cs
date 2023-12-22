@@ -1,8 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Xml.Linq;
-
-class Day21{
+﻿class Day21{
 
     static public List<string> Input = new List<string>();
     static public char[,] Grid;
@@ -36,7 +32,6 @@ class Day21{
             }
         }
     }
-    
 
     static long FindPath((int, int) sNode, long steps)
     {
@@ -91,49 +86,47 @@ class Day21{
         Console.WriteLine(FindPath((65, 65), 64));
     }
 
-
     static void Part2()
     {
         //Get complete field longs
         long steps = 26501365;
-        long fields = 26501365 / Input.Count;
-        long maxEven = FindPath((65, 65), 131);
-        long maxOdd = FindPath((65, 65), 130);
+        long fields = steps / Input.Count;
+        long maxEven = FindPath((65, 65), 3*Input.Count + 1);
+        long maxOdd = FindPath((65, 65), 3*Input.Count);
 
         //Get amount of total even and odd fields
         long startPair = (fields - 1) * (fields - 1);
-        long nonStartPair = fields * fields;
+        long nonStartPair = (fields) * (fields);
 
         //Get vertecies
-        long straightLeftover = steps % Input.Count;
-        long fromLeft = FindPath((0, 65), straightLeftover);
-        long fromRight = FindPath((130, 65), straightLeftover);
-        long fromUp = FindPath((65, 0), straightLeftover);
-        long fromDown = FindPath((65, 130), straightLeftover);
+        long fromLeft = FindPath((0, 65), Input.Count -1);
+        long fromRight = FindPath((130, 65), Input.Count -1);
+        long fromUp = FindPath((65, 0), Input.Count -1);
+        long fromDown = FindPath((65, 130), Input.Count -1);
+        long edgeSum = fromLeft + fromRight + fromDown + fromUp;
 
         //Get edges
-        long dif = 0;
-        //long upLeft = FindPath((0, 0), straightLeftover - dif) * (fields);
-        //long upRight = FindPath((130, 0), straightLeftover - dif) * (fields);
-        //long downLeft = FindPath((0, 130), straightLeftover - dif) * (fields);
-        //long downRight = FindPath((130, 130), straightLeftover - dif) * (fields);
+        long edgeCount = (3 * Input.Count - 3) / 2;
+        long upLeft = FindPath((0, 0), edgeCount);
+        long upRight = FindPath((130, 0), edgeCount);
+        long downLeft = FindPath((0, 130), edgeCount);
+        long downRight = FindPath((130, 130), edgeCount);
+        long shortEdge = upLeft + upRight + downLeft + downRight;
 
         //Get other edges
-        long upLeftBig = FindPath((0, 0), 131) * (fields - 1) * 2;
-        long upRightBig = FindPath((130, 0), 131) * (fields - 1) * 2;
-        long downLeftBig = FindPath((0, 130), 131) * (fields - 1) * 2;
-        long downRightBig = FindPath((130, 130), 131) * (fields - 1) * 2;
+        edgeCount = (Input.Count - 3) / 2;
+        long upLeftBig = FindPath((0, 0), edgeCount);
+        long upRightBig = FindPath((130, 0), edgeCount);
+        long downLeftBig = FindPath((0, 130), edgeCount);
+        long downRightBig = FindPath((130, 130), edgeCount);
+        long longEdge = upLeftBig + upRightBig + downLeftBig + downRightBig;
 
-        long sum = startPair * maxOdd + nonStartPair * maxEven + fromLeft + fromRight + fromUp + fromDown
-                     + upLeftBig + upRightBig + downLeftBig + downRightBig;
+        long sum = startPair * maxOdd + nonStartPair * maxEven + (fields - 1) * shortEdge + fields * longEdge + edgeSum;
         Console.WriteLine(sum);
     }
 
     //Part 1: 3809
-    //Part 2: 629720570456311 goal
-    //        629720580960709--
-    //        629720710428041
-
+    //Part 2: 629720570456311
 
     public static void Main(string[] args)
     {
