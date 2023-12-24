@@ -91,34 +91,36 @@
         //Get complete field longs
         long steps = 26501365;
         long fields = steps / Input.Count;
-        long maxEven = FindPath((65, 65), 3*Input.Count + 1);
-        long maxOdd = FindPath((65, 65), 3*Input.Count);
+        int maxV = Input.Count - 1;
+        int halfV = maxV / 2;
+        long maxEven = FindPath((halfV, halfV), 3*Input.Count + 1);
+        long maxOdd = FindPath((halfV, halfV), 3*Input.Count);
 
         //Get amount of total even and odd fields
         long startPair = (fields - 1) * (fields - 1);
         long nonStartPair = (fields) * (fields);
 
         //Get vertecies
-        long fromLeft = FindPath((0, 65), Input.Count -1);
-        long fromRight = FindPath((130, 65), Input.Count -1);
-        long fromUp = FindPath((65, 0), Input.Count -1);
-        long fromDown = FindPath((65, 130), Input.Count -1);
+        long fromLeft = FindPath((0, halfV), Input.Count -1);
+        long fromRight = FindPath((maxV, halfV), Input.Count -1);
+        long fromUp = FindPath((halfV, 0), Input.Count -1);
+        long fromDown = FindPath((halfV, maxV), Input.Count -1);
         long edgeSum = fromLeft + fromRight + fromDown + fromUp;
 
         //Get edges
         long edgeCount = (3 * Input.Count - 3) / 2;
         long upLeft = FindPath((0, 0), edgeCount);
-        long upRight = FindPath((130, 0), edgeCount);
-        long downLeft = FindPath((0, 130), edgeCount);
-        long downRight = FindPath((130, 130), edgeCount);
+        long upRight = FindPath((maxV, 0), edgeCount);
+        long downLeft = FindPath((0, maxV), edgeCount);
+        long downRight = FindPath((maxV, maxV), edgeCount);
         long shortEdge = upLeft + upRight + downLeft + downRight;
 
         //Get other edges
         edgeCount = (Input.Count - 3) / 2;
         long upLeftBig = FindPath((0, 0), edgeCount);
-        long upRightBig = FindPath((130, 0), edgeCount);
-        long downLeftBig = FindPath((0, 130), edgeCount);
-        long downRightBig = FindPath((130, 130), edgeCount);
+        long upRightBig = FindPath((maxV, 0), edgeCount);
+        long downLeftBig = FindPath((0, maxV), edgeCount);
+        long downRightBig = FindPath((maxV, maxV), edgeCount);
         long longEdge = upLeftBig + upRightBig + downLeftBig + downRightBig;
 
         long sum = startPair * maxOdd + nonStartPair * maxEven + (fields - 1) * shortEdge + fields * longEdge + edgeSum;
@@ -132,7 +134,7 @@
     {
         Input = ReadFile();
         CreateGrid();
-        Part1();
+        //Part1();
         Part2();
     }
 }

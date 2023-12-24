@@ -2,13 +2,13 @@
   <MonoDevelop.Ide.ItemProperties.22 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Day22.cs">
     <Files>
-      <File FileName="Day22.cs" Line="128" Column="1" />
-      <File FileName="input.txt" Line="401" Column="1" />
+      <File FileName="Day22.cs" Line="128" Column="38" />
+      <File FileName="input.txt" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="22" expanded="True">
+          <Node name="22">
             <Node name="22">
               <Node name="Day22.cs" selected="True" />
             </Node>
@@ -21,8 +21,6 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="/Users/nils/Documents/AdventOfCode/2023/22/Day22.cs" relfile="Day22.cs" line="133" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

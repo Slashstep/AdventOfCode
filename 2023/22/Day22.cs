@@ -83,14 +83,9 @@ class Day22{
         return false;
     }
 
-    static void Part1()
+    static List<((int x, int y, int z)[] brick, List<(int x, int y, int z)[]> under)> LetThemFall()
     {
         List<((int x, int y, int z)[] brick, List<(int x, int y, int z)[]> under)> Bricks = CreateBricks();
-        HashSet<(int x, int y, int z)[]> notToBeRemoved = new HashSet<(int x, int y, int z)[]>();
-        HashSet<(int x, int y, int z)[]> toBeRemoved = new HashSet<(int x, int y, int z)[]>();
-
-        //Let them fall
-
         Bricks = Bricks.OrderBy(b => b.brick[0].z).ToList();
 
         for (int i = 0; i < Bricks.Count; i++)
@@ -102,60 +97,108 @@ class Day22{
                 if (Bricks[i].brick[0].z <= 1)
                     continue;
 
-
                 if (IsBrickUnderneath(Bricks[i].brick, Bricks))
                 {
-                    for (int j = 0; j < Bricks[i].brick.Length; j++)
-                    {
-                        foreach (((int x, int y, int z)[] brick, List<(int x, int y, int z)[]> under) b in Bricks)
-                        {
-                            if (b.brick.Last().z != Bricks[i].brick[j].z - 1)
-                                continue;
+                    //for (int j = 0; j < Bricks[i].brick.Length; j++)
+                    //{
+                    //    foreach (((int x, int y, int z)[] brick, List<(int x, int y, int z)[]> under) b in Bricks)
+                    //    {
+                    //        if (b.brick.Last().z != Bricks[i].brick[j].z - 1)
+                    //            continue;
 
-                            if (Bricks[i].brick == b.brick)
-                                continue;
+                    //        if (Bricks[i].brick == b.brick)
+                    //            continue;
 
-                            if (b.brick.Contains((Bricks[i].brick[j].x, Bricks[i].brick[j].y, Bricks[i].brick[j].z - 1)))
-                            {
-                                if (!Bricks[i].under.Contains(b.brick))
-                                    Bricks[i].under.Add(b.brick);
-                                //continue;
-                            }
-                        }
-                    }
+                    //        if (b.brick.Contains((Bricks[i].brick[j].x, Bricks[i].brick[j].y, Bricks[i].brick[j].z - 1)))
+                    //        {
+                    //            if (!Bricks[i].under.Contains(b.brick))
+                    //                Bricks[i].under.Add(b.brick);
+                    //            //continue;
+                    //        }
+                    //    }
+                    //}
                     continue;
                 }
-
-                (int x, int y, int z)[] nBrick = new (int x, int y, int z)[Bricks[i].brick.Length];
-                for (int j = 0; j < Bricks[i].brick.Length; j++)
-                    nBrick[j] = (Bricks[i].brick[j].x, Bricks[i].brick[j].y, Bricks[i].brick[j].z - 1);
-                Bricks[i] = (nBrick, new List<(int x, int y, int z)[]>());
-                isFalling = true;
-            }
-        }
-
-        Bricks = Bricks.OrderBy(b => b.brick.Last().z).ToList();
-
-        Console.WriteLine(Bricks.Count - 1);
-        for (int i = Bricks.Count - 1; i >= 0; i--)
-        {
-            Console.WriteLine(Bricks[i].brick[0]);
-            Console.WriteLine(Bricks[i].under.Count);
-            if (Bricks[i].under.Count == 1)
-                notToBeRemoved.Add(Bricks[i].under[0]);
-            else if (Bricks[i].under.Count > 1)
-            {
-                for (int j = 0; j < Bricks[i].under.Count; j++)
+                else
                 {
-                    if (!notToBeRemoved.Contains(Bricks[i].under[j]))
-                        toBeRemoved.Add(Bricks[i].under[j]);
+                    (int x, int y, int z)[] nBrick = new (int x, int y, int z)[Bricks[i].brick.Length];
+                    for (int j = 0; j < Bricks[i].brick.Length; j++)
+                        nBrick[j] = (Bricks[i].brick[j].x, Bricks[i].brick[j].y, Bricks[i].brick[j].z - 1);
+                    Bricks[i] = (nBrick, new List<(int x, int y, int z)[]>());
+                    isFalling = true;
                 }
             }
-            if (!notToBeRemoved.Contains(Bricks[i].brick))
-                toBeRemoved.Add(Bricks[i].brick);
         }
 
-        Console.WriteLine(toBeRemoved.Count);
+        return Bricks;
+    }
+
+    static bool DoesSmthHappen(List<((int x, int y, int z)[] brick, List<(int x, int y, int z)[]> under)> Bricks)
+    {
+        //Bricks = Bricks.OrderBy(b => b.brick[0].z).ToList();
+
+        for (int i = 0; i < Bricks.Count; i++)
+        {
+            if (Bricks[i].brick[0].z <= 1)
+                continue;
+
+            if (!IsBrickUnderneath(Bricks[i].brick, Bricks))
+                return true;
+
+        }
+        return false;
+    }
+
+    static void Part1()
+    {
+        List<((int x, int y, int z)[] brick, List<(int x, int y, int z)[]> under)> setteledPosition = LetThemFall();
+
+        long fallRemovalCounter = 0;
+        for (int i = 0; i < setteledPosition.Count; i++)
+        {
+            List<((int x, int y, int z)[] brick, List<(int x, int y, int z)[]> under)> newSettled = new List<((int x, int y, int z)[] brick, List<(int x, int y, int z)[]> under)>(setteledPosition);
+            newSettled.Remove(setteledPosition[i]);
+
+            if (!DoesSmthHappen(newSettled))
+            {
+                fallRemovalCounter++;
+                Console.WriteLine(fallRemovalCounter);
+            }
+        }
+
+        Console.WriteLine(fallRemovalCounter);
+
+
+
+
+
+
+
+        //HashSet<(int x, int y, int z)[]> notToBeRemoved = new HashSet<(int x, int y, int z)[]>();
+        //HashSet<(int x, int y, int z)[]> toBeRemoved = new HashSet<(int x, int y, int z)[]>();
+
+        //Bricks = Bricks.OrderBy(b => b.brick.Last().z).ToList();
+
+        //Console.WriteLine(Bricks.Count - 1);
+        //for (int i = Bricks.Count - 1; i >= 0; i--)
+        //{
+        //    Console.WriteLine(Bricks[i].brick[0] + "->" + Bricks[i].brick.Last());
+        //    Console.WriteLine(Bricks[i].under.Count);
+        //    if (Bricks[i].under.Count == 1)
+        //        notToBeRemoved.Add(Bricks[i].under[0]);
+        //    else if (Bricks[i].under.Count > 1)
+        //    {
+        //        for (int j = 0; j < Bricks[i].under.Count; j++)
+        //        {
+        //            if (!notToBeRemoved.Contains(Bricks[i].under[j]))
+        //                toBeRemoved.Add(Bricks[i].under[j]);
+        //        }
+        //    }
+        //    if (!notToBeRemoved.Contains(Bricks[i].brick))
+        //        toBeRemoved.Add(Bricks[i].brick);
+        //}
+
+        //Console.WriteLine(toBeRemoved.Count);
     }
 
 
