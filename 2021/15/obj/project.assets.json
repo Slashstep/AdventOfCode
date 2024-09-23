@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/nils/Documents/Coding/AdventOfCode/2021/14/14.csproj",
-      "projectName": "14",
-      "projectPath": "/Users/nils/Documents/Coding/AdventOfCode/2021/14/14.csproj",
+      "projectUniqueName": "/Users/nils/Documents/Coding/AdventOfCode/2021/15/15.csproj",
+      "projectName": "15",
+      "projectPath": "/Users/nils/Documents/Coding/AdventOfCode/2021/15/15.csproj",
       "packagesPath": "/Users/nils/.nuget/packages/",
-      "outputPath": "/Users/nils/Documents/Coding/AdventOfCode/2021/14/obj/",
+      "outputPath": "/Users/nils/Documents/Coding/AdventOfCode/2021/15/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/nils/.nuget/NuGet/NuGet.Config"

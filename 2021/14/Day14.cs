@@ -21,7 +21,7 @@ class Day14{
         {
             Console.WriteLine($"An error occurred: {ex.Message}");
         }
-
+        
         return lines;
     }
 
@@ -44,7 +44,7 @@ class Day14{
         for (int i = 0; i < 10; i++){
             string newPolymer = polymer[0].ToString();
             for (int j = 0; j < polymer.Length - 1; j++){
-                newPolymer += Rules.Find(r => r.In == polymer.Substring(j, 2)).Out;
+                newPolymer += Rules.Find(r => r.In == polymer.Substring(j, 2))?.Out;
             }
             polymer = newPolymer;
         }
@@ -60,30 +60,41 @@ class Day14{
 
     static void Part2(){
         List<Rule> Rules = GetRules();
-
-        //Filter out Rules, that basically reproduce themselves and ignore them
-        //Create the resulting string but don't count it in
-
+        Dictionary<string, long> pairs = new Dictionary<string, long>();
+        Dictionary<char, long> let = new Dictionary<char, long>();
         string polymer = Input[0];
-        for (int i = 0; i < 40; i++){
-            string newPolymer = polymer[0].ToString();
-            for (int j = 0; j < polymer.Length - 1; j++){
-                newPolymer += Rules.Find(r => r.In == polymer.Substring(j, 2)).Out;
+
+        for (int i = 0; i < polymer.Length - 1; i++){
+            pairs.Add(polymer.Substring(i, 2), 1);
+        }
+
+        for (int j = 0; j < 40; j++){
+            Dictionary<string, long> newPairs = new Dictionary<string, long>();
+
+            foreach (string p in pairs.Keys){
+                string sub = p[0] + Rules.Find(r => r.In == p.Substring(0, 2))?.Out;
+                string s1 = sub.Substring(0, 2);
+                string s2 = sub.Substring(1, 2);
+
+                if (newPairs.ContainsKey(s1)) newPairs[s1] += pairs[p];
+                else newPairs.Add(s1, pairs[p]);
+
+                if (newPairs.ContainsKey(s2)) newPairs[s2] += pairs[p];
+                else newPairs.Add(s2, pairs[p]);
+
+                if (let.ContainsKey(s2[0])) let[s2[0]] += pairs[p];
+                else let.Add(s2[0], pairs[p]);
+                
             }
-            polymer = newPolymer;
+            
+            pairs = newPairs;
         }
 
-        Dictionary<char, int> letters = new Dictionary<char, int>();
-        for (int i = 0; i < polymer.Length; i++){
-            if (letters.ContainsKey(polymer[i])) letters[polymer[i]]++;
-            else letters.Add(polymer[i], 1);
-        }
-
-        Console.WriteLine(letters.Values.Max() - letters.Values.Min());
+        Console.WriteLine((let.Values.Max() - let.Values.Min() + 1));
     }
 
     //Part 1: 2408
-    //Part 2: 
+    //Part 2: 2651311098752
               
     public static void Main(string[] args){
         Input = ReadFile();
