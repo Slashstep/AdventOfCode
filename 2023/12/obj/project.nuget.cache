@@ -1,15 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "3W9c6d2W94YqYZ6EaWTRXq341CUZeY4GOFJussy5d3guO4Wezc798D7XRo+X4fw50t8jGju+J9pEaTOLQgTCRw==",
+  "dgSpecHash": "5GkfaK/eXrE=",
   "success": true,
-  "projectFilePath": "/Users/nils/Documents/AdventOfCode/2023/12/12.csproj",
+  "projectFilePath": "/Users/nils/Documents/Coding/AdventOfCode/2023/12/12.csproj",
   "expectedPackageFiles": [
     "/Users/nils/.nuget/packages/microsoft.extensions.caching.abstractions/8.0.0/microsoft.extensions.caching.abstractions.8.0.0.nupkg.sha512",
     "/Users/nils/.nuget/packages/microsoft.extensions.caching.memory/8.0.0/microsoft.extensions.caching.memory.8.0.0.nupkg.sha512",
     "/Users/nils/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/8.0.0/microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
     "/Users/nils/.nuget/packages/microsoft.extensions.logging.abstractions/8.0.0/microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
     "/Users/nils/.nuget/packages/microsoft.extensions.options/8.0.0/microsoft.extensions.options.8.0.0.nupkg.sha512",
-    "/Users/nils/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+    "/Users/nils/.nuget/packages/microsoft.extensions.primitives/8.0.0/microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "/Users/nils/.nuget/packages/microsoft.netcore.app.ref/7.0.20/microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "/Users/nils/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.20/microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "/Users/nils/.nuget/packages/microsoft.netcore.app.host.osx-arm64/7.0.20/microsoft.netcore.app.host.osx-arm64.7.0.20.nupkg.sha512"
   ],
   "logs": []
 }
