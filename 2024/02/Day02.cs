@@ -94,7 +94,7 @@ class Day01{
     }
 
     //Part 1: 202
-    //Part 2: 
+    //Part 2: 271
     public static void Main(string[] args){
         Input = ReadFile();
         Part1();
