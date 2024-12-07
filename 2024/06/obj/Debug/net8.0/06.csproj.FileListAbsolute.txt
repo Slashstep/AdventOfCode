@@ -1,0 +1,15 @@
+/Users/nils/Documents/Coding/AdventOfCode/2024/06/bin/Debug/net8.0/06
+/Users/nils/Documents/Coding/AdventOfCode/2024/06/bin/Debug/net8.0/06.deps.json
+/Users/nils/Documents/Coding/AdventOfCode/2024/06/bin/Debug/net8.0/06.runtimeconfig.json
+/Users/nils/Documents/Coding/AdventOfCode/2024/06/bin/Debug/net8.0/06.dll
+/Users/nils/Documents/Coding/AdventOfCode/2024/06/bin/Debug/net8.0/06.pdb
+/Users/nils/Documents/Coding/AdventOfCode/2024/06/obj/Debug/net8.0/06.GeneratedMSBuildEditorConfig.editorconfig
+/Users/nils/Documents/Coding/AdventOfCode/2024/06/obj/Debug/net8.0/06.AssemblyInfoInputs.cache
+/Users/nils/Documents/Coding/AdventOfCode/2024/06/obj/Debug/net8.0/06.AssemblyInfo.cs
+/Users/nils/Documents/Coding/AdventOfCode/2024/06/obj/Debug/net8.0/06.csproj.CoreCompileInputs.cache
+/Users/nils/Documents/Coding/AdventOfCode/2024/06/obj/Debug/net8.0/06.sourcelink.json
+/Users/nils/Documents/Coding/AdventOfCode/2024/06/obj/Debug/net8.0/06.dll
+/Users/nils/Documents/Coding/AdventOfCode/2024/06/obj/Debug/net8.0/refint/06.dll
+/Users/nils/Documents/Coding/AdventOfCode/2024/06/obj/Debug/net8.0/06.pdb
+/Users/nils/Documents/Coding/AdventOfCode/2024/06/obj/Debug/net8.0/06.genruntimeconfig.cache
+/Users/nils/Documents/Coding/AdventOfCode/2024/06/obj/Debug/net8.0/ref/06.dll
