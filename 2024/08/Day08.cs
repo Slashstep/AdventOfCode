@@ -10,7 +10,7 @@ using System.Text.RegularExpressions;
 using System.Reflection.PortableExecutable;
 using System.Runtime.CompilerServices;
 
-class Day09{
+class Day08{
     static public List<string> Input = new List<string>();
     static public List<Antenna> Antennas = new List<Antenna>();
 
