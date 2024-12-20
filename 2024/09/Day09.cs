@@ -14,6 +14,7 @@ class Day09{
     static public List<string> Input = new List<string>();
     static public Stack<Data> Datas = new Stack<Data>();
     static public Queue<long> Spaces = new Queue<long>();
+    static public List<long> SpacesList = new List<long>();
     static public List<Data> SortedDatas = new List<Data>();
 
     static List<string> ReadFile(){
@@ -35,6 +36,7 @@ class Day09{
     static void ReadData(){
         Datas = new Stack<Data>();
         Spaces = new Queue<long>();
+        SpacesList = new List<long>();
         SortedDatas = new List<Data>();
 
         long posCount = 0;
@@ -46,8 +48,10 @@ class Day09{
                 posCount += l;
             }
             else{
-                for (int j = 0; j < l; j++)
-                    Spaces.Enqueue(posCount++);
+                for (int j = 0; j < l; j++){
+                    Spaces.Enqueue(posCount);
+                    SpacesList.Add(posCount++);
+                }
             }
         }
     }
@@ -67,15 +71,13 @@ class Day09{
             SortedDatas.Add(curData);
         }
 
-        while (Datas.Count() > 0){
+        while (Datas.Count() > 0)
             SortedDatas.Add(Datas.Pop());
-        }
 
         long sum = 0;
         foreach (Data d in SortedDatas){
-            foreach (long i in d.Positions){
+            foreach (long i in d.Positions)
                 sum += d.ID * i;
-            }
         }
 
         Console.WriteLine(sum);
@@ -87,31 +89,41 @@ class Day09{
         while(Spaces.Count() > 0 && Datas.Count() > 0){
             Data curData = Datas.Pop();
 
-            for (int i = curData.Positions.Count() - 1; i >= 0; i--){
-                if (Spaces.Peek() > curData.Positions[i]) break;
-                if (Spaces.Count() <= 0) break;
-                curData.Positions[i] = Spaces.Dequeue();
+            int counter = 1;
+            for (int i = 0; i < SpacesList.Count() - 1; i++){
+                if (SpacesList[i] > curData.Positions[0]) break;
+                if (counter == curData.Positions.Count()){
+                    int l = 0;
+                    for (int j = i - counter + 1; j <= i; j++){
+                        curData.Positions[l++] = SpacesList[j];
+                        SpacesList.RemoveAt(j);
+                        i--;
+                        j--;
+                    }
+                    break;
+                }
+                else counter++;
+
+                if (SpacesList[i + 1] - SpacesList[i] > 1) counter = 1;
             }
 
             SortedDatas.Add(curData);
         }
 
-        while (Datas.Count() > 0){
+        while (Datas.Count() > 0)
             SortedDatas.Add(Datas.Pop());
-        }
 
         long sum = 0;
         foreach (Data d in SortedDatas){
-            foreach (long i in d.Positions){
+            foreach (long i in d.Positions)
                 sum += d.ID * i;
-            }
         }
 
         Console.WriteLine(sum);
     }
 
     //Part 1: 6415184586041
-    //Part 2: 
+    //Part 2: 6436819084274
     
     public static void Main(string[] args){
         Input = ReadFile();
